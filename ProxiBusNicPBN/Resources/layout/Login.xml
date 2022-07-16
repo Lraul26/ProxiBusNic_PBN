@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="15.0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        
+        
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_margin="15.0dp"
+        android:textStyle="bold"
+        android:text="@string/txt3"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <ImageView
+        android:src="@drawable/originallogo"
+        android:layout_width="match_parent"
+        android:layout_height="300.0dp"
+        android:contentDescription=""
+        android:id="@+id/imageView1" />
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout1">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableRow2">
+                <ImageView
+                    android:contentDescription=""
+                    android:layout_width="35.0dp"
+                    android:layout_height="33.0dp"
+                    android:src="@drawable/correo"
+                    android:id="@+id/imageView2" />
+                <EditText
+                    android:hint="@string/place1"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/edtemail" />
+            </TableRow>
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/tvemail" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="63.5dp"
+                android:id="@+id/tableRow4">
+                <ImageView
+                    android:contentDescription=""
+                    android:layout_width="35.0dp"
+                    android:layout_height="35.0dp"
+                    android:src="@drawable/pass"
+                    android:id="@+id/imageView3"
+                     />
+                <EditText
+                    android:hint="@string/place2"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@android:color/white"
+                    android:layout_width="558.5dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:id="@+id/edtpass" />
+            </TableRow>
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/tvpass" />
+            <CheckBox
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="42.5dp"
+                android:text="@string/check"
+                android:id="@+id/cbxRecordar" />
+            <ImageButton
+                android:contentDescription=""
+                android:background="@color/background"
+                android:src="@drawable/enter"
+                android:id="@+id/btnentrar"
+                android:layout_height="66.0dp"
+                android:layout_width="582.5dp" />
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/tvresultado" />
+            <TextView
+                android:textColor="@android:color/white"
+                android:textStyle="italic"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt4"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView6" />
+            <Button
+                android:gravity="center"
+                android:background="@color/background"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn2"
+                android:id="@+id/btnregistrar" />
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

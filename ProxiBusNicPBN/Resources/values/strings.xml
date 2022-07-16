@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Proxi Bus</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+	
+	<!-- string para paradas -->
+	<string name="txt1">E-mail</string>
+	<string name="txt2">Contraseña</string>
+	<string name="txt3">LOGIN</string>
+	<string name="txt4">¿Aún no tienes cuenta?</string>
+	<string name="txt5">Ingresar Comentario</string>
+	<string name="txt6">Nueva Contraseña</string>
+	<string name="txt7">Repetir Contraseña</string>
+	<string name="txt8">Proxi Bus Nic</string>
+	<string name="txt9">proxibusnic@TRMCompany.com</string>
+	<string name="place1">Direccion de correo</string>
+	<string name="place2">Contraseña</string>
+	<string name="check">Recordarme</string>
+	<string name="txt10">Rutas del transporte urbano</string>
+	<string name="txt11">Paradas de la capital de managua</string>
+	<string name="txt12">Comentarios sobre alguna parada</string>
+	<string name="txt13">Agregar Bus</string>
+	<string name="txt14">Editar Bus</string>
+	<string name="txt15">Agregar Parada</string>
+	<string name="txt16">Editar Parada</string>
+	<string name="txt17">Acciones Avanzadas</string>
+	<!-- string para paradas -->
+	<string name="txt18">Parada</string>
+	<string name="txt19">Ingrese una descipción de la parada</string>
+	<string name="txt20">(*)</string>
+	<string name="txt21">Alias</string>
+	<string name="txt22">(Opcional)</string>
+	<string name="txt23">Latitud</string>
+	<string name="txt24">Longitud</string>
+	<string name="txt25">Subir Foto</string>
+	<string name="txt26">Tomar Foto</string>
+	<!-- string para editar paradas -->
+	<string name="txt27">Editar Parada</string>
+	<string name="txt28">Cancelar</string>
+	<string name="txt29">Aceptar</string>
+	<string name="txt30">Foto</string>
+	<string name="txt31">Subir de galeria</string>
+	<string name="txt32">Tomar Foto</string>
+	<string name="txt33">Editar Bus</string>
+	<string name="txt34">Lista de paradas seleccionadas</string>
+	<!-- string para editar paradas -->
+	<string name="txt35">Agregar Parada a un Bus</string>
+	<string name="txt36">Numero de bus</string>
+	<string name="txt37">Lista de paradas a seleccionar</string>
+
+
+	<string name="btn1">Entrar</string>
+	<string name="btn2">Registrarse</string>
+	<string name="btn3">INICIAR SESIÓN</string>
+	<string name="btn4">Enviar Comentario</string>
+	<string name="txtRegistro">Registro de usuario</string>
+	
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="15.0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="@string/txtRegistro"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/textView1" />
+    <ImageView
+        android:src="@drawable/originallogo"
+        android:layout_width="match_parent"
+        android:layout_height="300.0dp"
+        android:contentDescription=""
+        android:id="@+id/imageView1" />
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView1">
+        <TableLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout1">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tableRow1">
+                <ImageView
+                    android:contentDescription=""
+                    android:layout_width="35.0dp"
+                    android:layout_height="35.0dp"
+                    android:src="@drawable/correo"
+                    android:id="@+id/imageView2" />
+                <EditText
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:hint="@string/place1"
+                    android:layout_width="629.0dp"
+                    android:layout_height="47.0dp"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/txtCorreo" />
+            </TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView2" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tableRow2">
+                <ImageView
+                    android:contentDescription=""
+                    android:layout_width="35.0dp"
+                    android:layout_height="35.0dp"
+                    android:src="@drawable/pass"
+                    android:id="@+id/imageView3" />
+                <EditText
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:hint="@string/txt6"
+                    android:layout_width="match_parent"
+                    android:layout_height="43.5dp"
+                    android:inputType="textPassword"
+                    android:id="@+id/txtPrimerClave" />
+            </TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView3" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tableRow3">
+                <ImageView
+                    android:contentDescription=""
+                    android:layout_width="35dp"
+                    android:layout_height="35.0dp"
+                    android:src="@drawable/pass"
+                    android:id="@+id/imageView4" />
+                <EditText
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:hint="@string/txt7"
+                    android:layout_width="match_parent"
+                    android:layout_height="51.0dp"
+                    android:inputType="textPassword"
+                    android:id="@+id/txtSegundaClave" />
+            </TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView4" />
+            <CheckBox
+                android:text="@string/check"
+                android:id="@+id/cbxMantenerSesion"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+         
+
+                <ImageButton
+                android:contentDescription=""
+                android:background="@color/background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/enter"
+                android:id="@+id/btnCrearCuenta" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView5" />
+                <Button
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:text="@string/btn3"
+                android:id="@+id/btnIniciarSesion" />
+    
+        
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

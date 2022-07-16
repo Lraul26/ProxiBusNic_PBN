@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+	<item android:title="Transporte">
+		<menu>
+			<item
+                android:id="@+id/nav_rutas"
+				android:icon="@drawable/bus"
+                android:title="Rutas" />
+			<item
+			   android:id="@+id/nav_parada"
+			   android:icon="@drawable/parada"
+			   android:title="Parada" />
+			<item
+			   android:id="@+id/nav_opciones"
+			   android:icon="@drawable/opcion"
+			   android:title="Acciones Avanzada" />
+		</menu>
+	</item>
+
+    <item android:title="Configuracion">
+        <menu>
+            <item
+                android:id="@+id/nav_tema"
+                android:icon="@drawable/tema"
+                android:title="Tema" />
+		    <item
+                android:id="@+id/nav_comentarios"
+				android:icon="@drawable/comentario"
+                android:title="Comentarios" />
+	        <item
+                android:id="@+id/nav_cerrar"
+				android:icon="@drawable/cerrar"
+                android:title="Cerrar sesion" />
+        </menu>
+    </item>
+
+</menu>
