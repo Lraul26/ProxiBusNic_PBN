@@ -15,6 +15,8 @@ namespace ProxiBusNicPBN.Clases
     {
         public static class Usuario
         {
+
+            public static bool usuarioAnonimo;
             public static string correo;
             public static string clave;
         }

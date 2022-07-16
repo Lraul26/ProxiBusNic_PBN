@@ -58,7 +58,7 @@ namespace ProxiBusNicPBN
                 {
                     if (db.Login(correo, clave))
                     {
-
+                        Clases.Global.Usuario.usuarioAnonimo = db.RolAnonimo(correo);
                         if (cbxRecordar.Checked)
                         {
 
@@ -67,6 +67,7 @@ namespace ProxiBusNicPBN
                             editor.PutString("correo", correo);
                             editor.PutString("clave", clave);
                             editor.PutBoolean("recordar", cbxRecordar.Checked);
+                            editor.PutBoolean("usuarioAnonimo", Clases.Global.Usuario.usuarioAnonimo);
                             editor.Apply();
 
 

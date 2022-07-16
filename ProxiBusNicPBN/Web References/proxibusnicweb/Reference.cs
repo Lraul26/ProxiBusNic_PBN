@@ -29,53 +29,57 @@ namespace ProxiBusNicPBN.proxibusnicweb {
     [System.Web.Services.WebServiceBindingAttribute(Name="ProxiBusNicWSSoap", Namespace="http://tempuri.org/")]
     public partial class ProxiBusNicWS : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback RolAnonimoOperationCompleted;
-        
         private System.Threading.SendOrPostCallback AgregarParadaOperationCompleted;
         
-        private System.Threading.SendOrPostCallback EditarBusParadasOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback EditarBusOperationCompleted;
+        private System.Threading.SendOrPostCallback EliminarParadaOperationCompleted;
         
         private System.Threading.SendOrPostCallback EditarParadasOperationCompleted;
         
-        private System.Threading.SendOrPostCallback AgregarSugerenciaOperationCompleted;
+        private System.Threading.SendOrPostCallback ListarParadaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarParadaActivasOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EditarBusParadasOperationCompleted;
         
         private System.Threading.SendOrPostCallback AgregarBusParadasOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarBusesParadasOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarBusParadaOperationCompleted;
         
         private System.Threading.SendOrPostCallback AgregarBusOperationCompleted;
         
         private System.Threading.SendOrPostCallback EliminarBusOperationCompleted;
         
-        private System.Threading.SendOrPostCallback EliminarParadaOperationCompleted;
+        private System.Threading.SendOrPostCallback ListarBusOperationCompleted;
         
-        private System.Threading.SendOrPostCallback EliminarBusesParadasOperationCompleted;
+        private System.Threading.SendOrPostCallback ListarBusActivosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EditarBusOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AgregarSugerenciaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EditarSugerenciaOperationCompleted;
         
         private System.Threading.SendOrPostCallback EliminaraSugerenciasOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarSugerenciasOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarSugerenciasPersonalesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RolAnonimoOperationCompleted;
         
         private System.Threading.SendOrPostCallback CambiarClaveOperationCompleted;
         
         private System.Threading.SendOrPostCallback CrearUsuarioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarUsuariosOperationCompleted;
         
         private System.Threading.SendOrPostCallback EliminarUsuarioOperationCompleted;
         
         private System.Threading.SendOrPostCallback CrearUsuarioRolOperationCompleted;
         
         private System.Threading.SendOrPostCallback LoginOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarParadaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarParadaActivasOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarBusOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarBusActivosOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarBusParadaOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarUsuariosOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ListarSugerenciasOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -116,25 +120,31 @@ namespace ProxiBusNicPBN.proxibusnicweb {
         }
         
         /// <remarks/>
-        public event RolAnonimoCompletedEventHandler RolAnonimoCompleted;
-        
-        /// <remarks/>
         public event AgregarParadaCompletedEventHandler AgregarParadaCompleted;
         
         /// <remarks/>
-        public event EditarBusParadasCompletedEventHandler EditarBusParadasCompleted;
-        
-        /// <remarks/>
-        public event EditarBusCompletedEventHandler EditarBusCompleted;
+        public event EliminarParadaCompletedEventHandler EliminarParadaCompleted;
         
         /// <remarks/>
         public event EditarParadasCompletedEventHandler EditarParadasCompleted;
         
         /// <remarks/>
-        public event AgregarSugerenciaCompletedEventHandler AgregarSugerenciaCompleted;
+        public event ListarParadaCompletedEventHandler ListarParadaCompleted;
+        
+        /// <remarks/>
+        public event ListarParadaActivasCompletedEventHandler ListarParadaActivasCompleted;
+        
+        /// <remarks/>
+        public event EditarBusParadasCompletedEventHandler EditarBusParadasCompleted;
         
         /// <remarks/>
         public event AgregarBusParadasCompletedEventHandler AgregarBusParadasCompleted;
+        
+        /// <remarks/>
+        public event EliminarBusesParadasCompletedEventHandler EliminarBusesParadasCompleted;
+        
+        /// <remarks/>
+        public event ListarBusParadaCompletedEventHandler ListarBusParadaCompleted;
         
         /// <remarks/>
         public event AgregarBusCompletedEventHandler AgregarBusCompleted;
@@ -143,19 +153,40 @@ namespace ProxiBusNicPBN.proxibusnicweb {
         public event EliminarBusCompletedEventHandler EliminarBusCompleted;
         
         /// <remarks/>
-        public event EliminarParadaCompletedEventHandler EliminarParadaCompleted;
+        public event ListarBusCompletedEventHandler ListarBusCompleted;
         
         /// <remarks/>
-        public event EliminarBusesParadasCompletedEventHandler EliminarBusesParadasCompleted;
+        public event ListarBusActivosCompletedEventHandler ListarBusActivosCompleted;
+        
+        /// <remarks/>
+        public event EditarBusCompletedEventHandler EditarBusCompleted;
+        
+        /// <remarks/>
+        public event AgregarSugerenciaCompletedEventHandler AgregarSugerenciaCompleted;
+        
+        /// <remarks/>
+        public event EditarSugerenciaCompletedEventHandler EditarSugerenciaCompleted;
         
         /// <remarks/>
         public event EliminaraSugerenciasCompletedEventHandler EliminaraSugerenciasCompleted;
+        
+        /// <remarks/>
+        public event ListarSugerenciasCompletedEventHandler ListarSugerenciasCompleted;
+        
+        /// <remarks/>
+        public event ListarSugerenciasPersonalesCompletedEventHandler ListarSugerenciasPersonalesCompleted;
+        
+        /// <remarks/>
+        public event RolAnonimoCompletedEventHandler RolAnonimoCompleted;
         
         /// <remarks/>
         public event CambiarClaveCompletedEventHandler CambiarClaveCompleted;
         
         /// <remarks/>
         public event CrearUsuarioCompletedEventHandler CrearUsuarioCompleted;
+        
+        /// <remarks/>
+        public event ListarUsuariosCompletedEventHandler ListarUsuariosCompleted;
         
         /// <remarks/>
         public event EliminarUsuarioCompletedEventHandler EliminarUsuarioCompleted;
@@ -165,56 +196,6 @@ namespace ProxiBusNicPBN.proxibusnicweb {
         
         /// <remarks/>
         public event LoginCompletedEventHandler LoginCompleted;
-        
-        /// <remarks/>
-        public event ListarParadaCompletedEventHandler ListarParadaCompleted;
-        
-        /// <remarks/>
-        public event ListarParadaActivasCompletedEventHandler ListarParadaActivasCompleted;
-        
-        /// <remarks/>
-        public event ListarBusCompletedEventHandler ListarBusCompleted;
-        
-        /// <remarks/>
-        public event ListarBusActivosCompletedEventHandler ListarBusActivosCompleted;
-        
-        /// <remarks/>
-        public event ListarBusParadaCompletedEventHandler ListarBusParadaCompleted;
-        
-        /// <remarks/>
-        public event ListarUsuariosCompletedEventHandler ListarUsuariosCompleted;
-        
-        /// <remarks/>
-        public event ListarSugerenciasCompletedEventHandler ListarSugerenciasCompleted;
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RolAnonimo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public bool RolAnonimo(string correo) {
-            object[] results = this.Invoke("RolAnonimo", new object[] {
-                        correo});
-            return ((bool)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void RolAnonimoAsync(string correo) {
-            this.RolAnonimoAsync(correo, null);
-        }
-        
-        /// <remarks/>
-        public void RolAnonimoAsync(string correo, object userState) {
-            if ((this.RolAnonimoOperationCompleted == null)) {
-                this.RolAnonimoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRolAnonimoOperationCompleted);
-            }
-            this.InvokeAsync("RolAnonimo", new object[] {
-                        correo}, this.RolAnonimoOperationCompleted, userState);
-        }
-        
-        private void OnRolAnonimoOperationCompleted(object arg) {
-            if ((this.RolAnonimoCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.RolAnonimoCompleted(this, new RolAnonimoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AgregarParada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -246,60 +227,31 @@ namespace ProxiBusNicPBN.proxibusnicweb {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EditarBusParadas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int EditarBusParadas(BusParadaWS busParadaWs) {
-            object[] results = this.Invoke("EditarBusParadas", new object[] {
-                        busParadaWs});
-            return ((int)(results[0]));
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarParada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ResultadoSW EliminarParada(int id) {
+            object[] results = this.Invoke("EliminarParada", new object[] {
+                        id});
+            return ((ResultadoSW)(results[0]));
         }
         
         /// <remarks/>
-        public void EditarBusParadasAsync(BusParadaWS busParadaWs) {
-            this.EditarBusParadasAsync(busParadaWs, null);
+        public void EliminarParadaAsync(int id) {
+            this.EliminarParadaAsync(id, null);
         }
         
         /// <remarks/>
-        public void EditarBusParadasAsync(BusParadaWS busParadaWs, object userState) {
-            if ((this.EditarBusParadasOperationCompleted == null)) {
-                this.EditarBusParadasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEditarBusParadasOperationCompleted);
+        public void EliminarParadaAsync(int id, object userState) {
+            if ((this.EliminarParadaOperationCompleted == null)) {
+                this.EliminarParadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarParadaOperationCompleted);
             }
-            this.InvokeAsync("EditarBusParadas", new object[] {
-                        busParadaWs}, this.EditarBusParadasOperationCompleted, userState);
+            this.InvokeAsync("EliminarParada", new object[] {
+                        id}, this.EliminarParadaOperationCompleted, userState);
         }
         
-        private void OnEditarBusParadasOperationCompleted(object arg) {
-            if ((this.EditarBusParadasCompleted != null)) {
+        private void OnEliminarParadaOperationCompleted(object arg) {
+            if ((this.EliminarParadaCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.EditarBusParadasCompleted(this, new EditarBusParadasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EditarBus", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int EditarBus(BusWS busWs) {
-            object[] results = this.Invoke("EditarBus", new object[] {
-                        busWs});
-            return ((int)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void EditarBusAsync(BusWS busWs) {
-            this.EditarBusAsync(busWs, null);
-        }
-        
-        /// <remarks/>
-        public void EditarBusAsync(BusWS busWs, object userState) {
-            if ((this.EditarBusOperationCompleted == null)) {
-                this.EditarBusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEditarBusOperationCompleted);
-            }
-            this.InvokeAsync("EditarBus", new object[] {
-                        busWs}, this.EditarBusOperationCompleted, userState);
-        }
-        
-        private void OnEditarBusOperationCompleted(object arg) {
-            if ((this.EditarBusCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.EditarBusCompleted(this, new EditarBusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.EliminarParadaCompleted(this, new EliminarParadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -333,31 +285,85 @@ namespace ProxiBusNicPBN.proxibusnicweb {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AgregarSugerencia", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int AgregarSugerencia(SugerenciaWS sugerenciaWS) {
-            object[] results = this.Invoke("AgregarSugerencia", new object[] {
-                        sugerenciaWS});
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarParada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ParadasWS[] ListarParada() {
+            object[] results = this.Invoke("ListarParada", new object[0]);
+            return ((ParadasWS[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarParadaAsync() {
+            this.ListarParadaAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ListarParadaAsync(object userState) {
+            if ((this.ListarParadaOperationCompleted == null)) {
+                this.ListarParadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarParadaOperationCompleted);
+            }
+            this.InvokeAsync("ListarParada", new object[0], this.ListarParadaOperationCompleted, userState);
+        }
+        
+        private void OnListarParadaOperationCompleted(object arg) {
+            if ((this.ListarParadaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarParadaCompleted(this, new ListarParadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarParadaActivas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ParadasWS[] ListarParadaActivas() {
+            object[] results = this.Invoke("ListarParadaActivas", new object[0]);
+            return ((ParadasWS[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarParadaActivasAsync() {
+            this.ListarParadaActivasAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ListarParadaActivasAsync(object userState) {
+            if ((this.ListarParadaActivasOperationCompleted == null)) {
+                this.ListarParadaActivasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarParadaActivasOperationCompleted);
+            }
+            this.InvokeAsync("ListarParadaActivas", new object[0], this.ListarParadaActivasOperationCompleted, userState);
+        }
+        
+        private void OnListarParadaActivasOperationCompleted(object arg) {
+            if ((this.ListarParadaActivasCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarParadaActivasCompleted(this, new ListarParadaActivasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EditarBusParadas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EditarBusParadas(BusParadaWS busParadaWs) {
+            object[] results = this.Invoke("EditarBusParadas", new object[] {
+                        busParadaWs});
             return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void AgregarSugerenciaAsync(SugerenciaWS sugerenciaWS) {
-            this.AgregarSugerenciaAsync(sugerenciaWS, null);
+        public void EditarBusParadasAsync(BusParadaWS busParadaWs) {
+            this.EditarBusParadasAsync(busParadaWs, null);
         }
         
         /// <remarks/>
-        public void AgregarSugerenciaAsync(SugerenciaWS sugerenciaWS, object userState) {
-            if ((this.AgregarSugerenciaOperationCompleted == null)) {
-                this.AgregarSugerenciaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAgregarSugerenciaOperationCompleted);
+        public void EditarBusParadasAsync(BusParadaWS busParadaWs, object userState) {
+            if ((this.EditarBusParadasOperationCompleted == null)) {
+                this.EditarBusParadasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEditarBusParadasOperationCompleted);
             }
-            this.InvokeAsync("AgregarSugerencia", new object[] {
-                        sugerenciaWS}, this.AgregarSugerenciaOperationCompleted, userState);
+            this.InvokeAsync("EditarBusParadas", new object[] {
+                        busParadaWs}, this.EditarBusParadasOperationCompleted, userState);
         }
         
-        private void OnAgregarSugerenciaOperationCompleted(object arg) {
-            if ((this.AgregarSugerenciaCompleted != null)) {
+        private void OnEditarBusParadasOperationCompleted(object arg) {
+            if ((this.EditarBusParadasCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.AgregarSugerenciaCompleted(this, new AgregarSugerenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.EditarBusParadasCompleted(this, new EditarBusParadasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -387,6 +393,62 @@ namespace ProxiBusNicPBN.proxibusnicweb {
             if ((this.AgregarBusParadasCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.AgregarBusParadasCompleted(this, new AgregarBusParadasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarBusesParadas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ResultadoSW EliminarBusesParadas(int id) {
+            object[] results = this.Invoke("EliminarBusesParadas", new object[] {
+                        id});
+            return ((ResultadoSW)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarBusesParadasAsync(int id) {
+            this.EliminarBusesParadasAsync(id, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarBusesParadasAsync(int id, object userState) {
+            if ((this.EliminarBusesParadasOperationCompleted == null)) {
+                this.EliminarBusesParadasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarBusesParadasOperationCompleted);
+            }
+            this.InvokeAsync("EliminarBusesParadas", new object[] {
+                        id}, this.EliminarBusesParadasOperationCompleted, userState);
+        }
+        
+        private void OnEliminarBusesParadasOperationCompleted(object arg) {
+            if ((this.EliminarBusesParadasCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarBusesParadasCompleted(this, new EliminarBusesParadasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarBusParada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public BusParadaWS[] ListarBusParada() {
+            object[] results = this.Invoke("ListarBusParada", new object[0]);
+            return ((BusParadaWS[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarBusParadaAsync() {
+            this.ListarBusParadaAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ListarBusParadaAsync(object userState) {
+            if ((this.ListarBusParadaOperationCompleted == null)) {
+                this.ListarBusParadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarBusParadaOperationCompleted);
+            }
+            this.InvokeAsync("ListarBusParada", new object[0], this.ListarBusParadaOperationCompleted, userState);
+        }
+        
+        private void OnListarBusParadaOperationCompleted(object arg) {
+            if ((this.ListarBusParadaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarBusParadaCompleted(this, new ListarBusParadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -449,60 +511,143 @@ namespace ProxiBusNicPBN.proxibusnicweb {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarParada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ResultadoSW EliminarParada(int id) {
-            object[] results = this.Invoke("EliminarParada", new object[] {
-                        id});
-            return ((ResultadoSW)(results[0]));
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarBus", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public BusWS[] ListarBus() {
+            object[] results = this.Invoke("ListarBus", new object[0]);
+            return ((BusWS[])(results[0]));
         }
         
         /// <remarks/>
-        public void EliminarParadaAsync(int id) {
-            this.EliminarParadaAsync(id, null);
+        public void ListarBusAsync() {
+            this.ListarBusAsync(null);
         }
         
         /// <remarks/>
-        public void EliminarParadaAsync(int id, object userState) {
-            if ((this.EliminarParadaOperationCompleted == null)) {
-                this.EliminarParadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarParadaOperationCompleted);
+        public void ListarBusAsync(object userState) {
+            if ((this.ListarBusOperationCompleted == null)) {
+                this.ListarBusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarBusOperationCompleted);
             }
-            this.InvokeAsync("EliminarParada", new object[] {
-                        id}, this.EliminarParadaOperationCompleted, userState);
+            this.InvokeAsync("ListarBus", new object[0], this.ListarBusOperationCompleted, userState);
         }
         
-        private void OnEliminarParadaOperationCompleted(object arg) {
-            if ((this.EliminarParadaCompleted != null)) {
+        private void OnListarBusOperationCompleted(object arg) {
+            if ((this.ListarBusCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.EliminarParadaCompleted(this, new EliminarParadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.ListarBusCompleted(this, new ListarBusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarBusesParadas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ResultadoSW EliminarBusesParadas(int id) {
-            object[] results = this.Invoke("EliminarBusesParadas", new object[] {
-                        id});
-            return ((ResultadoSW)(results[0]));
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarBusActivos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public BusWS[] ListarBusActivos() {
+            object[] results = this.Invoke("ListarBusActivos", new object[0]);
+            return ((BusWS[])(results[0]));
         }
         
         /// <remarks/>
-        public void EliminarBusesParadasAsync(int id) {
-            this.EliminarBusesParadasAsync(id, null);
+        public void ListarBusActivosAsync() {
+            this.ListarBusActivosAsync(null);
         }
         
         /// <remarks/>
-        public void EliminarBusesParadasAsync(int id, object userState) {
-            if ((this.EliminarBusesParadasOperationCompleted == null)) {
-                this.EliminarBusesParadasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarBusesParadasOperationCompleted);
+        public void ListarBusActivosAsync(object userState) {
+            if ((this.ListarBusActivosOperationCompleted == null)) {
+                this.ListarBusActivosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarBusActivosOperationCompleted);
             }
-            this.InvokeAsync("EliminarBusesParadas", new object[] {
-                        id}, this.EliminarBusesParadasOperationCompleted, userState);
+            this.InvokeAsync("ListarBusActivos", new object[0], this.ListarBusActivosOperationCompleted, userState);
         }
         
-        private void OnEliminarBusesParadasOperationCompleted(object arg) {
-            if ((this.EliminarBusesParadasCompleted != null)) {
+        private void OnListarBusActivosOperationCompleted(object arg) {
+            if ((this.ListarBusActivosCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.EliminarBusesParadasCompleted(this, new EliminarBusesParadasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.ListarBusActivosCompleted(this, new ListarBusActivosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EditarBus", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EditarBus(BusWS busWs) {
+            object[] results = this.Invoke("EditarBus", new object[] {
+                        busWs});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EditarBusAsync(BusWS busWs) {
+            this.EditarBusAsync(busWs, null);
+        }
+        
+        /// <remarks/>
+        public void EditarBusAsync(BusWS busWs, object userState) {
+            if ((this.EditarBusOperationCompleted == null)) {
+                this.EditarBusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEditarBusOperationCompleted);
+            }
+            this.InvokeAsync("EditarBus", new object[] {
+                        busWs}, this.EditarBusOperationCompleted, userState);
+        }
+        
+        private void OnEditarBusOperationCompleted(object arg) {
+            if ((this.EditarBusCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EditarBusCompleted(this, new EditarBusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AgregarSugerencia", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int AgregarSugerencia(SugerenciaWS sugerenciaWS) {
+            object[] results = this.Invoke("AgregarSugerencia", new object[] {
+                        sugerenciaWS});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AgregarSugerenciaAsync(SugerenciaWS sugerenciaWS) {
+            this.AgregarSugerenciaAsync(sugerenciaWS, null);
+        }
+        
+        /// <remarks/>
+        public void AgregarSugerenciaAsync(SugerenciaWS sugerenciaWS, object userState) {
+            if ((this.AgregarSugerenciaOperationCompleted == null)) {
+                this.AgregarSugerenciaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAgregarSugerenciaOperationCompleted);
+            }
+            this.InvokeAsync("AgregarSugerencia", new object[] {
+                        sugerenciaWS}, this.AgregarSugerenciaOperationCompleted, userState);
+        }
+        
+        private void OnAgregarSugerenciaOperationCompleted(object arg) {
+            if ((this.AgregarSugerenciaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AgregarSugerenciaCompleted(this, new AgregarSugerenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EditarSugerencia", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EditarSugerencia(SugerenciaWS sugerenciaWS) {
+            object[] results = this.Invoke("EditarSugerencia", new object[] {
+                        sugerenciaWS});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EditarSugerenciaAsync(SugerenciaWS sugerenciaWS) {
+            this.EditarSugerenciaAsync(sugerenciaWS, null);
+        }
+        
+        /// <remarks/>
+        public void EditarSugerenciaAsync(SugerenciaWS sugerenciaWS, object userState) {
+            if ((this.EditarSugerenciaOperationCompleted == null)) {
+                this.EditarSugerenciaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEditarSugerenciaOperationCompleted);
+            }
+            this.InvokeAsync("EditarSugerencia", new object[] {
+                        sugerenciaWS}, this.EditarSugerenciaOperationCompleted, userState);
+        }
+        
+        private void OnEditarSugerenciaOperationCompleted(object arg) {
+            if ((this.EditarSugerenciaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EditarSugerenciaCompleted(this, new EditarSugerenciaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -532,6 +677,91 @@ namespace ProxiBusNicPBN.proxibusnicweb {
             if ((this.EliminaraSugerenciasCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.EliminaraSugerenciasCompleted(this, new EliminaraSugerenciasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarSugerencias", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public SugerenciaWS[] ListarSugerencias() {
+            object[] results = this.Invoke("ListarSugerencias", new object[0]);
+            return ((SugerenciaWS[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarSugerenciasAsync() {
+            this.ListarSugerenciasAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ListarSugerenciasAsync(object userState) {
+            if ((this.ListarSugerenciasOperationCompleted == null)) {
+                this.ListarSugerenciasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarSugerenciasOperationCompleted);
+            }
+            this.InvokeAsync("ListarSugerencias", new object[0], this.ListarSugerenciasOperationCompleted, userState);
+        }
+        
+        private void OnListarSugerenciasOperationCompleted(object arg) {
+            if ((this.ListarSugerenciasCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarSugerenciasCompleted(this, new ListarSugerenciasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarSugerenciasPersonales", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public SugerenciaWS[] ListarSugerenciasPersonales(string correo) {
+            object[] results = this.Invoke("ListarSugerenciasPersonales", new object[] {
+                        correo});
+            return ((SugerenciaWS[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarSugerenciasPersonalesAsync(string correo) {
+            this.ListarSugerenciasPersonalesAsync(correo, null);
+        }
+        
+        /// <remarks/>
+        public void ListarSugerenciasPersonalesAsync(string correo, object userState) {
+            if ((this.ListarSugerenciasPersonalesOperationCompleted == null)) {
+                this.ListarSugerenciasPersonalesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarSugerenciasPersonalesOperationCompleted);
+            }
+            this.InvokeAsync("ListarSugerenciasPersonales", new object[] {
+                        correo}, this.ListarSugerenciasPersonalesOperationCompleted, userState);
+        }
+        
+        private void OnListarSugerenciasPersonalesOperationCompleted(object arg) {
+            if ((this.ListarSugerenciasPersonalesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarSugerenciasPersonalesCompleted(this, new ListarSugerenciasPersonalesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/RolAnonimo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool RolAnonimo(string correo) {
+            object[] results = this.Invoke("RolAnonimo", new object[] {
+                        correo});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RolAnonimoAsync(string correo) {
+            this.RolAnonimoAsync(correo, null);
+        }
+        
+        /// <remarks/>
+        public void RolAnonimoAsync(string correo, object userState) {
+            if ((this.RolAnonimoOperationCompleted == null)) {
+                this.RolAnonimoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRolAnonimoOperationCompleted);
+            }
+            this.InvokeAsync("RolAnonimo", new object[] {
+                        correo}, this.RolAnonimoOperationCompleted, userState);
+        }
+        
+        private void OnRolAnonimoOperationCompleted(object arg) {
+            if ((this.RolAnonimoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RolAnonimoCompleted(this, new RolAnonimoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -594,6 +824,33 @@ namespace ProxiBusNicPBN.proxibusnicweb {
             if ((this.CrearUsuarioCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.CrearUsuarioCompleted(this, new CrearUsuarioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarUsuarios", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public UsuariosWS[] ListarUsuarios() {
+            object[] results = this.Invoke("ListarUsuarios", new object[0]);
+            return ((UsuariosWS[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarUsuariosAsync() {
+            this.ListarUsuariosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ListarUsuariosAsync(object userState) {
+            if ((this.ListarUsuariosOperationCompleted == null)) {
+                this.ListarUsuariosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarUsuariosOperationCompleted);
+            }
+            this.InvokeAsync("ListarUsuarios", new object[0], this.ListarUsuariosOperationCompleted, userState);
+        }
+        
+        private void OnListarUsuariosOperationCompleted(object arg) {
+            if ((this.ListarUsuariosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarUsuariosCompleted(this, new ListarUsuariosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -687,195 +944,6 @@ namespace ProxiBusNicPBN.proxibusnicweb {
             if ((this.LoginCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.LoginCompleted(this, new LoginCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarParada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ParadasWS[] ListarParada() {
-            object[] results = this.Invoke("ListarParada", new object[0]);
-            return ((ParadasWS[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarParadaAsync() {
-            this.ListarParadaAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ListarParadaAsync(object userState) {
-            if ((this.ListarParadaOperationCompleted == null)) {
-                this.ListarParadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarParadaOperationCompleted);
-            }
-            this.InvokeAsync("ListarParada", new object[0], this.ListarParadaOperationCompleted, userState);
-        }
-        
-        private void OnListarParadaOperationCompleted(object arg) {
-            if ((this.ListarParadaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarParadaCompleted(this, new ListarParadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarParadaActivas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ParadasWS[] ListarParadaActivas() {
-            object[] results = this.Invoke("ListarParadaActivas", new object[0]);
-            return ((ParadasWS[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarParadaActivasAsync() {
-            this.ListarParadaActivasAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ListarParadaActivasAsync(object userState) {
-            if ((this.ListarParadaActivasOperationCompleted == null)) {
-                this.ListarParadaActivasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarParadaActivasOperationCompleted);
-            }
-            this.InvokeAsync("ListarParadaActivas", new object[0], this.ListarParadaActivasOperationCompleted, userState);
-        }
-        
-        private void OnListarParadaActivasOperationCompleted(object arg) {
-            if ((this.ListarParadaActivasCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarParadaActivasCompleted(this, new ListarParadaActivasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarBus", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public BusWS[] ListarBus() {
-            object[] results = this.Invoke("ListarBus", new object[0]);
-            return ((BusWS[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarBusAsync() {
-            this.ListarBusAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ListarBusAsync(object userState) {
-            if ((this.ListarBusOperationCompleted == null)) {
-                this.ListarBusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarBusOperationCompleted);
-            }
-            this.InvokeAsync("ListarBus", new object[0], this.ListarBusOperationCompleted, userState);
-        }
-        
-        private void OnListarBusOperationCompleted(object arg) {
-            if ((this.ListarBusCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarBusCompleted(this, new ListarBusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarBusActivos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public BusWS[] ListarBusActivos() {
-            object[] results = this.Invoke("ListarBusActivos", new object[0]);
-            return ((BusWS[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarBusActivosAsync() {
-            this.ListarBusActivosAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ListarBusActivosAsync(object userState) {
-            if ((this.ListarBusActivosOperationCompleted == null)) {
-                this.ListarBusActivosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarBusActivosOperationCompleted);
-            }
-            this.InvokeAsync("ListarBusActivos", new object[0], this.ListarBusActivosOperationCompleted, userState);
-        }
-        
-        private void OnListarBusActivosOperationCompleted(object arg) {
-            if ((this.ListarBusActivosCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarBusActivosCompleted(this, new ListarBusActivosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarBusParada", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public BusParadaWS[] ListarBusParada() {
-            object[] results = this.Invoke("ListarBusParada", new object[0]);
-            return ((BusParadaWS[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarBusParadaAsync() {
-            this.ListarBusParadaAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ListarBusParadaAsync(object userState) {
-            if ((this.ListarBusParadaOperationCompleted == null)) {
-                this.ListarBusParadaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarBusParadaOperationCompleted);
-            }
-            this.InvokeAsync("ListarBusParada", new object[0], this.ListarBusParadaOperationCompleted, userState);
-        }
-        
-        private void OnListarBusParadaOperationCompleted(object arg) {
-            if ((this.ListarBusParadaCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarBusParadaCompleted(this, new ListarBusParadaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarUsuarios", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public UsuariosWS[] ListarUsuarios() {
-            object[] results = this.Invoke("ListarUsuarios", new object[0]);
-            return ((UsuariosWS[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarUsuariosAsync() {
-            this.ListarUsuariosAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ListarUsuariosAsync(object userState) {
-            if ((this.ListarUsuariosOperationCompleted == null)) {
-                this.ListarUsuariosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarUsuariosOperationCompleted);
-            }
-            this.InvokeAsync("ListarUsuarios", new object[0], this.ListarUsuariosOperationCompleted, userState);
-        }
-        
-        private void OnListarUsuariosOperationCompleted(object arg) {
-            if ((this.ListarUsuariosCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarUsuariosCompleted(this, new ListarUsuariosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarSugerencias", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public SugerenciaWS[] ListarSugerencias() {
-            object[] results = this.Invoke("ListarSugerencias", new object[0]);
-            return ((SugerenciaWS[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarSugerenciasAsync() {
-            this.ListarSugerenciasAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ListarSugerenciasAsync(object userState) {
-            if ((this.ListarSugerenciasOperationCompleted == null)) {
-                this.ListarSugerenciasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarSugerenciasOperationCompleted);
-            }
-            this.InvokeAsync("ListarSugerencias", new object[0], this.ListarSugerenciasOperationCompleted, userState);
-        }
-        
-        private void OnListarSugerenciasOperationCompleted(object arg) {
-            if ((this.ListarSugerenciasCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarSugerenciasCompleted(this, new ListarSugerenciasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1081,39 +1149,6 @@ namespace ProxiBusNicPBN.proxibusnicweb {
             }
             set {
                 this.claveField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class ResultadoSW {
-        
-        private string mensajeField;
-        
-        private bool respuestaField;
-        
-        /// <remarks/>
-        public string mensaje {
-            get {
-                return this.mensajeField;
-            }
-            set {
-                this.mensajeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool respuesta {
-            get {
-                return this.respuestaField;
-            }
-            set {
-                this.respuestaField = value;
             }
         }
     }
@@ -1339,27 +1374,34 @@ namespace ProxiBusNicPBN.proxibusnicweb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void RolAnonimoCompletedEventHandler(object sender, RolAnonimoCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RolAnonimoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class ResultadoSW {
         
-        private object[] results;
+        private string mensajeField;
         
-        internal RolAnonimoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
+        private bool respuestaField;
+        
+        /// <remarks/>
+        public string mensaje {
+            get {
+                return this.mensajeField;
+            }
+            set {
+                this.mensajeField = value;
+            }
         }
         
         /// <remarks/>
-        public bool Result {
+        public bool respuesta {
             get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
+                return this.respuestaField;
+            }
+            set {
+                this.respuestaField = value;
             }
         }
     }
@@ -1392,52 +1434,26 @@ namespace ProxiBusNicPBN.proxibusnicweb {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void EditarBusParadasCompletedEventHandler(object sender, EditarBusParadasCompletedEventArgs e);
+    public delegate void EliminarParadaCompletedEventHandler(object sender, EliminarParadaCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class EditarBusParadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class EliminarParadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal EditarBusParadasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal EliminarParadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
         /// <remarks/>
-        public int Result {
+        public ResultadoSW Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void EditarBusCompletedEventHandler(object sender, EditarBusCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class EditarBusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal EditarBusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public int Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
+                return ((ResultadoSW)(this.results[0]));
             }
         }
     }
@@ -1470,17 +1486,69 @@ namespace ProxiBusNicPBN.proxibusnicweb {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void AgregarSugerenciaCompletedEventHandler(object sender, AgregarSugerenciaCompletedEventArgs e);
+    public delegate void ListarParadaCompletedEventHandler(object sender, ListarParadaCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class AgregarSugerenciaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class ListarParadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal AgregarSugerenciaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal ListarParadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ParadasWS[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ParadasWS[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void ListarParadaActivasCompletedEventHandler(object sender, ListarParadaActivasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarParadaActivasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarParadaActivasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ParadasWS[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ParadasWS[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void EditarBusParadasCompletedEventHandler(object sender, EditarBusParadasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EditarBusParadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EditarBusParadasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1516,6 +1584,58 @@ namespace ProxiBusNicPBN.proxibusnicweb {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void EliminarBusesParadasCompletedEventHandler(object sender, EliminarBusesParadasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarBusesParadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarBusesParadasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ResultadoSW Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ResultadoSW)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void ListarBusParadaCompletedEventHandler(object sender, ListarBusParadaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarBusParadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarBusParadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public BusParadaWS[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((BusParadaWS[])(this.results[0]));
             }
         }
     }
@@ -1574,52 +1694,130 @@ namespace ProxiBusNicPBN.proxibusnicweb {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void EliminarParadaCompletedEventHandler(object sender, EliminarParadaCompletedEventArgs e);
+    public delegate void ListarBusCompletedEventHandler(object sender, ListarBusCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class EliminarParadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class ListarBusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal EliminarParadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal ListarBusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
         /// <remarks/>
-        public ResultadoSW Result {
+        public BusWS[] Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((ResultadoSW)(this.results[0]));
+                return ((BusWS[])(this.results[0]));
             }
         }
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void EliminarBusesParadasCompletedEventHandler(object sender, EliminarBusesParadasCompletedEventArgs e);
+    public delegate void ListarBusActivosCompletedEventHandler(object sender, ListarBusActivosCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class EliminarBusesParadasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class ListarBusActivosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal EliminarBusesParadasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal ListarBusActivosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
         /// <remarks/>
-        public ResultadoSW Result {
+        public BusWS[] Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((ResultadoSW)(this.results[0]));
+                return ((BusWS[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void EditarBusCompletedEventHandler(object sender, EditarBusCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EditarBusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EditarBusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void AgregarSugerenciaCompletedEventHandler(object sender, AgregarSugerenciaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AgregarSugerenciaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AgregarSugerenciaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void EditarSugerenciaCompletedEventHandler(object sender, EditarSugerenciaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EditarSugerenciaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EditarSugerenciaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -1646,6 +1844,84 @@ namespace ProxiBusNicPBN.proxibusnicweb {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((ResultadoSW)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void ListarSugerenciasCompletedEventHandler(object sender, ListarSugerenciasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarSugerenciasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarSugerenciasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public SugerenciaWS[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((SugerenciaWS[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void ListarSugerenciasPersonalesCompletedEventHandler(object sender, ListarSugerenciasPersonalesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarSugerenciasPersonalesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarSugerenciasPersonalesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public SugerenciaWS[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((SugerenciaWS[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void RolAnonimoCompletedEventHandler(object sender, RolAnonimoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RolAnonimoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RolAnonimoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
             }
         }
     }
@@ -1698,6 +1974,32 @@ namespace ProxiBusNicPBN.proxibusnicweb {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((ResultadoSW)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void ListarUsuariosCompletedEventHandler(object sender, ListarUsuariosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarUsuariosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarUsuariosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public UsuariosWS[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((UsuariosWS[])(this.results[0]));
             }
         }
     }
@@ -1776,188 +2078,6 @@ namespace ProxiBusNicPBN.proxibusnicweb {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void ListarParadaCompletedEventHandler(object sender, ListarParadaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarParadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarParadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ParadasWS[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ParadasWS[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void ListarParadaActivasCompletedEventHandler(object sender, ListarParadaActivasCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarParadaActivasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarParadaActivasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ParadasWS[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ParadasWS[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void ListarBusCompletedEventHandler(object sender, ListarBusCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarBusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarBusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public BusWS[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((BusWS[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void ListarBusActivosCompletedEventHandler(object sender, ListarBusActivosCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarBusActivosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarBusActivosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public BusWS[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((BusWS[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void ListarBusParadaCompletedEventHandler(object sender, ListarBusParadaCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarBusParadaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarBusParadaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public BusParadaWS[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((BusParadaWS[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void ListarUsuariosCompletedEventHandler(object sender, ListarUsuariosCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarUsuariosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarUsuariosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public UsuariosWS[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((UsuariosWS[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void ListarSugerenciasCompletedEventHandler(object sender, ListarSugerenciasCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarSugerenciasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarSugerenciasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public SugerenciaWS[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((SugerenciaWS[])(this.results[0]));
             }
         }
     }

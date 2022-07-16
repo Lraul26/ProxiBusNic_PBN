@@ -22,18 +22,21 @@ namespace ProxiBusNicPBN
 
             ISharedPreferences preferencia = Application.GetSharedPreferences("informacion", FileCreationMode.Private);
             bool recordar = preferencia.GetBoolean("recordar", false);
-            string correo = preferencia.GetString("correo", "");
-            string clave = preferencia.GetString("clave", "");
-
+            Clases.Global.Usuario.usuarioAnonimo = preferencia.GetBoolean("usuarioAnonimo", false);
+            Clases.Global.Usuario.correo = preferencia.GetString("correo", "");
+            Clases.Global.Usuario.clave =  preferencia.GetString("clave", "");
+            Toast.MakeText(Application.Context, ""+Clases.Global.Usuario.usuarioAnonimo, ToastLength.Short).Show();
             if (recordar)
-            {
-                Clases.Global.Usuario.correo = correo;
-                Clases.Global.Usuario.clave = clave;
+            {             
                 Intent intent = new Intent(this, typeof(MainActivity));
                 StartActivity(intent);
             }
             else
             {
+                Clases.Global.Usuario.usuarioAnonimo = false;
+                Clases.Global.Usuario.correo = null;
+                Clases.Global.Usuario.clave =null;
+
                 ISharedPreferencesEditor editor = preferencia.Edit();
                 editor.Clear();
                 editor.Apply();
