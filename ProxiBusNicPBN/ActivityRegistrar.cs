@@ -45,6 +45,7 @@ namespace ProxiBusNicPBN
                     var resultado = db.CrearUsuario(txtCorreo.Text.Trim(), txtClaveUno.Text);
                     if (resultado.respuesta)
                     {
+                        Clases.Global.Usuario.usuarioAnonimo = db.RolAnonimo(txtCorreo.Text.Trim());
                         if (cbxRecordar.Checked)
                         {
 
@@ -53,11 +54,13 @@ namespace ProxiBusNicPBN
                             editor.PutString("correo", txtCorreo.Text.Trim());
                             editor.PutString("clave", txtClaveUno.Text);
                             editor.PutBoolean("recordar", cbxRecordar.Checked);
+                            editor.PutBoolean("usuarioAnonimo", Clases.Global.Usuario.usuarioAnonimo);
                             editor.Apply();
 
                         }
                         else
                         {
+                            
                             Clases.Global.Usuario.correo = txtCorreo.Text.Trim();
                             Clases.Global.Usuario.clave = txtClaveUno.Text;
                         }

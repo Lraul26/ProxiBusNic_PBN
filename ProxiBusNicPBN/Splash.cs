@@ -25,7 +25,7 @@ namespace ProxiBusNicPBN
             Clases.Global.Usuario.usuarioAnonimo = preferencia.GetBoolean("usuarioAnonimo", false);
             Clases.Global.Usuario.correo = preferencia.GetString("correo", "");
             Clases.Global.Usuario.clave =  preferencia.GetString("clave", "");
-            Toast.MakeText(Application.Context, ""+Clases.Global.Usuario.usuarioAnonimo, ToastLength.Short).Show();
+            
             if (recordar)
             {             
                 Intent intent = new Intent(this, typeof(MainActivity));
