@@ -68,11 +68,21 @@
     <Compile Include="ActivityLogin.cs" />
     <Compile Include="ActivityRegistrar.cs" />
     <Compile Include="AgregarParadaRL.cs" />
+    <Compile Include="EditarRutasActivityTR.cs" />
+    <Compile Include="AgregarRutasActivityTR.cs" />
     <Compile Include="AgregarSugerenciaRL.cs" />
     <Compile Include="Clases\AdapterCometarioParada.cs" />
     <Compile Include="Clases\AdapterSugerencia.cs" />
     <Compile Include="Clases\Global.cs" />
+    <Compile Include="Clases\ParadasAdapter.cs" />
+    <Compile Include="Clases\ParadasBusAdapter.cs" />
+    <Compile Include="Clases\RutasAdapter.cs" />
+    <Compile Include="DetalleParadaActivityTR.cs" />
     <Compile Include="EditarSugerenciaRL.cs" />
+    <Compile Include="ListadoAsignarParadasActivityTR.cs" />
+    <Compile Include="ListadoParadasActivityTR.cs" />
+    <Compile Include="ListadoEditarRutasActivityTR .cs" />
+    <Compile Include="ListadoRutasActivityTR.cs" />
     <Compile Include="ListadoSugerenciaRL.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -561,6 +571,13 @@
     <AndroidResource Include="Resources\layout\AgregarParadaRL.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\DetalleParadaTR.xml" />
+    <AndroidResource Include="Resources\layout\ListadoParadasTR.xml" />
+    <AndroidResource Include="Resources\layout\ListadoRutasTR.xml" />
+    <AndroidResource Include="Resources\layout\RegistrarRutaTR.xml" />
+    <AndroidResource Include="Resources\layout\EditarRutaTR.xml" />
+    <AndroidResource Include="Resources\layout\ListadoEditarRutasTR.xml" />
+    <AndroidResource Include="Resources\layout\ListadoAsignarParadasTR.xml" />
     <Content Include="xml\file_paths.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

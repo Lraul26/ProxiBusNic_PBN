@@ -54,6 +54,10 @@
 	<string name="btn2">Registrarse</string>
 	<string name="btn3">INICIAR SESIÓN</string>
 	<string name="btn4">Enviar Comentario</string>
-	<string name="txtRegistro">Registro de usuario</string>
-	
+	<string name="txtRegistro">Registro de usuario</string> 
+
+  <string name="lblListadoBuses">Listado de rutas de managua</string>
+  <string name="lblListadoParadas">Paradas de la ruta</string>
+  <string name="btnIr">Ir</string>
+   
 </resources>
