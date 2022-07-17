@@ -64,9 +64,16 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccionesAvanzadasRL.cs" />
     <Compile Include="ActivityLogin.cs" />
     <Compile Include="ActivityRegistrar.cs" />
+    <Compile Include="AgregarParadaRL.cs" />
+    <Compile Include="AgregarSugerenciaRL.cs" />
+    <Compile Include="Clases\AdapterCometarioParada.cs" />
+    <Compile Include="Clases\AdapterSugerencia.cs" />
     <Compile Include="Clases\Global.cs" />
+    <Compile Include="EditarSugerenciaRL.cs" />
+    <Compile Include="ListadoSugerenciaRL.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -539,6 +546,21 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\layout\AgregarSugerenciaRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EditarSugerenciaRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListaSugerenciaRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AccionesAvanzadasRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AgregarParadaRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <Content Include="xml\file_paths.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

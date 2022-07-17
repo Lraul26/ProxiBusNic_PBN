@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:padding="15.0dp"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="@color/blanco"
+        android:gravity="center"
+        android:text="@string/txt12"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="87.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/textView1" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="369.0dp"
+        android:id="@+id/lvoaradaCom" />
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/blanco"
+        android:text="@string/txt5"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="61.5dp"
+        android:id="@+id/textView3" />
+    <EditText
+        android:textColor="@color/blanco"
+        android:layout_width="match_parent"
+        android:layout_height="62.0dp"
+        android:id="@+id/txtRegistrarComentario" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="67.0dp"
+        android:id="@+id/linearLayout1">
+        <ImageButton
+            android:gravity="center"
+            android:background="@color/background"
+            android:contentDescription=""
+            android:src="@drawable/cancelar"
+            android:layout_width="100.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnCancelarCom" />
+        <ImageButton
+            android:gravity="center"
+            android:background="@color/background"
+            android:contentDescription=""
+            android:src="@drawable/aceptar"
+            android:layout_width="100.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/bntAceptarCom" />
+        <ImageButton
+            android:gravity="center"
+            android:background="@color/background"
+            android:contentDescription=""
+            android:src="@drawable/editar"
+            android:layout_width="100.5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEditarCom"/>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/blanco"
+            android:text=" Cancelar"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="99.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView4" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/blanco"
+            android:text="Aceptar"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="113.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/blanco"
+            android:text="Editar"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="94.5dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

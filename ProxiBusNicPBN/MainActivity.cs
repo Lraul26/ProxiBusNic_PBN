@@ -88,7 +88,8 @@ namespace ProxiBusNicPBN
             }
             else if (id == Resource.Id.nav_opciones)
             {
-
+                var res = new Intent(this, typeof(AccionesAvanzadasRL));
+                StartActivity(res);
             }
             else if (id == Resource.Id.nav_tema)
             {
@@ -115,7 +116,8 @@ namespace ProxiBusNicPBN
             }
             else if (id == Resource.Id.nav_comentarios)
             {
-
+                var res = new Intent(this, typeof(AgregarSugerenciaRL));
+                StartActivity(res);
             }
             else if (id == Resource.Id.nav_cerrar)
             {
