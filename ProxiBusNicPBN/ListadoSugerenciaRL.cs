@@ -35,7 +35,6 @@ namespace ProxiBusNicPBN
         private void Lvsugerencia_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var item = new Intent(this, typeof(EditarSugerenciaRL));
-
             sugerencia = servicio.ListarSugerencias().ToList()[e.Position];
             item.PutExtra("id", sugerencia.Id);
             StartActivity(item);

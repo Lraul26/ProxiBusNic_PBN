@@ -16,7 +16,6 @@ namespace ProxiBusNicPBN
     {
         proxibusnicweb.ProxiBusNicWS serve = new proxibusnicweb.ProxiBusNicWS();
         proxibusnicweb.SugerenciaWS sugerencia = null;
-
         proxibusnicweb.SugerenciaWS sugerencias = new proxibusnicweb.SugerenciaWS();
 
         int id;
@@ -57,8 +56,8 @@ namespace ProxiBusNicPBN
                 serve.EliminaraSugerenciasCompleted += Serve_EliminaraSugerenciasCompleted;
                 serve.EliminaraSugerenciasAsync(id);
 
-                var item = new Intent(this, typeof(AgregarSugerenciaRL));
-                StartActivity(item);
+                var res = new Intent(this, typeof(ListadoSugerenciaRL));
+                StartActivity(res);
 
             }).SetNegativeButton("No", (senderAlert, args) => { }).Show();
         }
@@ -84,25 +83,26 @@ namespace ProxiBusNicPBN
         {
             if (validar())
             {
-                var idparada = sugerencia.ParadaId;
+                sugerencias.Id = id;
                 sugerencias.DescripcionSugerencia = txtSugerencia.Text;
                 sugerencias.UsuarioCreacion = Clases.Global.Usuario.correo;
-                sugerencias.ParadaId = idparada;
+                sugerencias.ParadaId = sugerencia.ParadaId;
                 serve.EditarSugerenciaCompleted += Serve_EditarSugerenciaCompleted;
                 serve.EditarSugerenciaAsync(sugerencias);
-               
             }
         }
 
         private void Serve_EditarSugerenciaCompleted(object sender, proxibusnicweb.EditarSugerenciaCompletedEventArgs e)
         {
-            if (e.Result == -1 )
+            if (e.Result == -1   )
             {
                 Toast.MakeText(Application.Context, "No se Pudo editar el comentario", ToastLength.Short).Show();
             }
             else
             {
                 Toast.MakeText(Application.Context, "comentario editado con exito", ToastLength.Short).Show();
+                var res = new Intent(this, typeof(ListadoSugerenciaRL));
+                StartActivity(res);
             }
         }
     }

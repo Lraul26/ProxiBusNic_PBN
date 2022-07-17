@@ -1,68 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
     android:background="@color/background"
-    android:padding="15.0dp"
+    android:padding="15dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-
      <TextView
         android:gravity="center"
+        android:text="@string/txt27"
         android:textColor="@android:color/white"
-        android:text="@string/txt15"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
-        android:layout_height="78.5dp"
+        android:layout_height="81.0dp"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:id="@+id/txtTitulo" />
+        android:id="@+id/textView1" />
     <TextView
         android:textColor="@android:color/white"
         android:text="@string/txt18"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView8" />
+        android:id="@+id/txt1" />
     <EditText
-        android:textColorHint="@color/blanco"
-        android:hint="@string/txt19"
         android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editDescripcion" />
+        android:id="@+id/etEditarParada" />
     <TextView
         android:textColor="@android:color/holo_red_light"
         android:text="@string/txt20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
+        android:id="@+id/txt2" />
     <TextView
         android:text=""
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView10" />
+        android:id="@+id/txt3" />
     <TextView
         android:textColor="@android:color/white"
         android:text="@string/txt21"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView9" />
+        android:id="@+id/txt4" />
     <EditText
         android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editAlias" />
+        android:id="@+id/etEditarAlias" />
      <TextView
         android:text="@string/txt22"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5" />
+        android:id="@+id/txt5" />
     <TextView
         android:text=""
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView11" />
+        android:id="@+id/txt6" />
     <LinearLayout
         android:gravity="center"
         android:orientation="horizontal"
@@ -70,21 +67,21 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout4" >
+        android:id="@+id/linearLayoutEditarParada1" >
         <TextView
             android:textColor="@android:color/white"
             android:text="@string/txt23"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="183.5dp"
             android:layout_height="match_parent"
-            android:id="@+id/textView12" />
+            android:id="@+id/txt7" />
         <TextView
             android:textColor="@android:color/white"
             android:text="@string/txt24"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView13" />
+            android:id="@+id/txt8" />
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -93,23 +90,21 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2">
+        android:id="@+id/linearLayoutEditarParada2">
         <EditText
             android:gravity="center"
             android:textColor="@android:color/white"
             android:inputType="textMultiLine"
             android:layout_width="183.5dp"
             android:layout_height="match_parent"
-            android:id="@+id/editlatitud" />
-       
+            android:id="@+id/etEditarlatitud" />
         <EditText
             android:gravity="center"
             android:textColor="@android:color/white"
             android:inputType="textMultiLine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/editlongitud" />
-       
+            android:id="@+id/etEditarlongitud" />
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -118,71 +113,121 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout3">
+        android:id="@+id/linearLayoutEditarParada3">
         <TextView
             android:text="@string/txt22"
             android:layout_width="183.5dp"
             android:layout_height="match_parent"
-            android:id="@+id/textView6" />
+            android:id="@+id/txt9" />
         <TextView
             android:text="@string/txt22"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView7" />
+            android:id="@+id/txt10" />
 
     </LinearLayout>
     <TextView
         android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Foto"
+        android:text="@string/txt30"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/textView3" />
+        android:id="@+id/txt11" />
     <ImageView
         android:contentDescription=""
         android:src="@drawable/paradapordefecto"
         android:layout_width="match_parent"
-        android:layout_height="206.5dp"
-        android:id="@+id/imageParada" />
+        android:layout_height="182.0dp"
+        android:id="@+id/ivEditarParada" />
     <LinearLayout
         android:gravity="center"
         android:orientation="horizontal"
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="69.0dp"
-        android:id="@+id/linearLayout1">
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutEditarParada4">
         <ImageButton
             android:contentDescription=""
             android:layout_margin="5dp"
             android:paddingBottom="5dp"
             android:background="@color/background"
             android:src="@drawable/galeria"
-            android:layout_width="65.0dp"
-            android:layout_height="74.0dp"
-            android:id="@+id/btnGaleria" />
+            android:layout_width="67.5dp"
+            android:layout_height="79.0dp"
+            android:id="@+id/btnEditarfoto" />
         <ImageButton
             android:contentDescription=""
             android:layout_margin="5dp"
             android:paddingBottom="5dp"
             android:background="@color/background"
             android:src="@drawable/camara"
-            android:layout_width="51.0dp"
+            android:layout_width="62.5dp"
             android:layout_height="match_parent"
-            android:id="@+id/btnCamara" />
+            android:id="@+id/btnEditarCamara" />
     </LinearLayout>
-    <ImageButton
-        android:background="@color/background"
-        android:src="@drawable/aceptar"
-        android:layout_width="69.5dp"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnAceptar" />
-    <TextView
-        android:gravity="center"
-        android:textColor="@android:color/white"
-        android:text="@string/txt29"
-        android:layout_width="74.5dp"
+        android:id="@+id/linearLayoutEditarParada5">
+        <ImageButton
+            android:gravity="center"
+            android:background="@color/background"
+            android:contentDescription=""
+            android:src="@drawable/cancelar"
+            android:layout_width="125.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnEditarCancelar" />
+        <ImageButton
+            android:gravity="center"
+            android:background="@color/background"
+            android:contentDescription=""
+            android:src="@drawable/aceptar"
+            android:layout_width="105.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnEditarAceptar" />
+        <ImageButton
+            android:contentDescription=""
+            android:gravity="center"
+            android:background="@color/background"
+            android:src="@drawable/atras"
+            android:layout_width="126.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnregresar" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView14" />
-   
+        android:id="@+id/linearLayoutEditarParada6" >
+        <TextView
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Eliminar Parada"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="122.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Guardar Cambios"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="116.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="regresar atras"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="106.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView4" />
+    </LinearLayout>
 </LinearLayout>

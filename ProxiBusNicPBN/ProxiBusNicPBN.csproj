@@ -70,10 +70,13 @@
     <Compile Include="AgregarParadaRL.cs" />
     <Compile Include="AgregarSugerenciaRL.cs" />
     <Compile Include="Clases\AdapterCometarioParada.cs" />
+    <Compile Include="Clases\AdapterParadaEditar.cs" />
     <Compile Include="Clases\AdapterSugerencia.cs" />
     <Compile Include="Clases\Global.cs" />
+    <Compile Include="EditarParadaRL.cs" />
     <Compile Include="EditarSugerenciaRL.cs" />
     <Compile Include="ListadoSugerenciaRL.cs" />
+    <Compile Include="ListaParadasEditarRL.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -561,6 +564,18 @@
     <AndroidResource Include="Resources\layout\AgregarParadaRL.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListadoParadaEditarRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EditarParadaRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\atras.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\atras.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\atras.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\atras.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\atras.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\atras.png" />
     <Content Include="xml\file_paths.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
