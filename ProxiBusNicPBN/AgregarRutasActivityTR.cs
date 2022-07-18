@@ -19,7 +19,7 @@ namespace ProxiBusNicPBN
     //public class AgregarRutasActivity : Activity, IDialogInterfaceOnClickListener, IDialogInterfaceOnMultiChoiceClickListener
     public class AgregarRutasActivityTR : Activity
     {
-        Button btnAsignarParadas, btnGuardar,btnTomarFoto, btnAbrirGaleria,btnBorrarFoto;
+        ImageButton btnAsignarParadas, btnGuardar,btnTomarFoto, btnAbrirGaleria,btnBorrarFoto;
         CheckBox chkEstado;
         EditText txtNumeroRuta;
         List<proxibusnicweb.ParadasWS> paradas;
@@ -40,26 +40,24 @@ namespace ProxiBusNicPBN
             chkEstado = FindViewById<CheckBox>(Resource.Id.chkEstado);
             txtNumeroRuta = FindViewById<EditText>(Resource.Id.txtNumeroRuta);
 
-            btnAsignarParadas = FindViewById<Button>(Resource.Id.btnAsignarParadas);
-            //btnAsignarParadas.Click += delegate
-            //{
-            //    ShowDialog[0];
-            //};
-            imgFotoBus = FindViewById<ImageView>(Resource.Id.imgFotoBus);
+            btnAsignarParadas = FindViewById<ImageButton>(Resource.Id.btnAsignarParadas);
+            btnAsignarParadas.Click += BtnAsignarParadas_Click;
+
+             imgFotoBus = FindViewById<ImageView>(Resource.Id.imgFotoBus);
             imgFotoBus.SetImageResource(Resource.Drawable.Ruta);
 
-            btnGuardar = FindViewById<Button>(Resource.Id.btnGuardar);
+            btnGuardar = FindViewById<ImageButton>(Resource.Id.btnGuardar);
             btnGuardar.Click += BtnGuardar_Click;
 
-            btnTomarFoto = FindViewById<Button>(Resource.Id.btnAbrirCamara);
+            btnTomarFoto = FindViewById<ImageButton>(Resource.Id.btnAbrirCamara);
             btnTomarFoto.Click += BtnTomarFoto_Click;
-            btnAbrirGaleria = FindViewById<Button>(Resource.Id.btnAbrirGaleria);
+            btnAbrirGaleria = FindViewById<ImageButton>(Resource.Id.btnAbrirGaleria);
             btnAbrirGaleria.Click += BtnAbrirGaleria_Click;
 
-            btnBorrarFoto = FindViewById<Button>(Resource.Id.btnBorrarFoto);
+            btnBorrarFoto = FindViewById<ImageButton>(Resource.Id.btnBorrarFoto);
             btnBorrarFoto.Click += BtnBorrarFoto_Click;
         }
-
+ 
         private void BtnBorrarFoto_Click(object sender, EventArgs e)
         {
 

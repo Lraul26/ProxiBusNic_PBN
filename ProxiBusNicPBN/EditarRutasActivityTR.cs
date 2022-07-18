@@ -19,7 +19,7 @@ namespace ProxiBusNicPBN
     //public class AgregarRutasActivity : Activity, IDialogInterfaceOnClickListener, IDialogInterfaceOnMultiChoiceClickListener
     public class EditarRutasActivityTR : Activity
     {
-        Button btnAsignarParadas, btnGuardar, btnTomarFoto, btnAbrirGaleria, btnBorrarFoto,btnEliminar;
+        ImageButton btnAsignarParadas, btnGuardar, btnTomarFoto, btnAbrirGaleria, btnBorrarFoto,btnEliminar;
         CheckBox chkEstado;
         EditText txtNumeroRuta;
         List<proxibusnicweb.ParadasWS> paradas;
@@ -44,25 +44,25 @@ namespace ProxiBusNicPBN
                 chkEstado = FindViewById<CheckBox>(Resource.Id.chkEstado);
                 txtNumeroRuta = FindViewById<EditText>(Resource.Id.txtNumeroRuta);
 
-                btnAsignarParadas = FindViewById<Button>(Resource.Id.btnReasignarParadas);
+                btnAsignarParadas = FindViewById<ImageButton>(Resource.Id.btnReasignarParadas);
                 btnAsignarParadas.Click += BtnAsignarParadas_Click;
 
                 imgFotoBus = FindViewById<ImageView>(Resource.Id.imgFotoBus);
                 imgFotoBus.SetImageResource(Resource.Drawable.Ruta);
                 llenado();
-                btnGuardar = FindViewById<Button>(Resource.Id.btnGuardar);
+                btnGuardar = FindViewById<ImageButton>(Resource.Id.btnGuardar);
                 btnGuardar.Click += BtnGuardar_Click;
 
-                btnTomarFoto = FindViewById<Button>(Resource.Id.btnAbrirCamara);
+                btnTomarFoto = FindViewById<ImageButton>(Resource.Id.btnAbrirCamara);
                 btnTomarFoto.Click += BtnTomarFoto_Click;
 
-                btnAbrirGaleria = FindViewById<Button>(Resource.Id.btnAbrirGaleria);
+                btnAbrirGaleria = FindViewById<ImageButton>(Resource.Id.btnAbrirGaleria);
                 btnAbrirGaleria.Click += BtnAbrirGaleria_Click;
 
-                btnBorrarFoto = FindViewById<Button>(Resource.Id.btnBorrarFoto);
+                btnBorrarFoto = FindViewById<ImageButton>(Resource.Id.btnBorrarFoto);
                 btnBorrarFoto.Click += BtnBorrarFoto_Click;
 
-                btnEliminar = FindViewById<Button>(Resource.Id.btnEliminar);
+                btnEliminar = FindViewById<ImageButton>(Resource.Id.btnEliminar);
                 btnEliminar.Click += BtnEliminar_Click;
             }
             else
@@ -75,14 +75,15 @@ namespace ProxiBusNicPBN
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            try
-            {
-
+          
                 Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
                 alert.SetTitle("Eliminar");
                 alert.SetMessage("¿Desea eliminar el registro?").SetPositiveButton("Sí", (senderAlert, args) =>
                 {
-                    proxibusnicweb.ResultadoSW r = db.EliminarBus(ruta.Id);
+                    try
+                    {
+
+                        proxibusnicweb.ResultadoSW r = db.EliminarBus(ruta.Id);
 
                     if (r.respuesta)
                     {
@@ -94,14 +95,16 @@ namespace ProxiBusNicPBN
                     {
                         Toast.MakeText(Application.Context, r.mensaje, ToastLength.Short).Show();
                     }
-                }).SetNegativeButton("No", (senderAlert, args) => { }).Show();
+                }
+            catch
+            {
+                Toast.MakeText(Application.Context, "No se puede eliminar la ruta porque posee paradas", ToastLength.Short).Show();
+            }
+        }).SetNegativeButton("No", (senderAlert, args) => { }).Show();
 
 
              
-            }
-            catch {
-                Toast.MakeText(Application.Context,"No se puede eliminar la ruta porque posee paradas",ToastLength.Short).Show();
-            }
+         
             
         }
 

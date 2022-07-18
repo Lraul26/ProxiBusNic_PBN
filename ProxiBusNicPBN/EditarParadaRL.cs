@@ -90,7 +90,7 @@ namespace ProxiBusNicPBN
             Foto.SetImageBitmap(null);
             bitmapData = null;
 
-            Foto.SetImageResource(Resource.Drawable.Ruta);
+            Foto.SetImageResource(Resource.Drawable.ParadaPorDefecto);
         }
 
         public Android.Graphics.Bitmap byteArrayToImage(byte[] source)
@@ -227,29 +227,34 @@ namespace ProxiBusNicPBN
         }
         private void Eliminar_Click(object sender, EventArgs e)
         {
-            try
-            {
+           
                 Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
                 alert.SetTitle("Eliminar");
                 alert.SetMessage("¿Desea eliminar el registro de parada?").SetPositiveButton("Sí", (senderAlert, args) =>
                 {
-                    proxibusnicweb.ResultadoSW r = serve.EliminarParada(id);
+                    try
+                    {
+                        proxibusnicweb.ResultadoSW r = serve.EliminarParada(id);
 
-                    if (r.respuesta)
-                    {
-                        Toast.MakeText(Application.Context, r.mensaje, ToastLength.Short).Show();
-                        this.Finish();
+                        if (r.respuesta)
+                        {
+                            Toast.MakeText(Application.Context, r.mensaje, ToastLength.Short).Show();
+                            this.Finish();
+                        }
+                        else
+                        {
+                            Toast.MakeText(Application.Context, r.mensaje, ToastLength.Short).Show();
+                        }
+
                     }
-                    else
-                    {
-                        Toast.MakeText(Application.Context, r.mensaje, ToastLength.Short).Show();
-                    }
-                }).SetNegativeButton("No", (senderAlert, args) => { }).Show();
-            }
             catch
             {
                 Toast.MakeText(Application.Context, "No se puede eliminar la parada, posee Sugerencias...", ToastLength.Short).Show();
             }
+
+           
+                }).SetNegativeButton("No", (senderAlert, args) => { }).Show();
+          
         }
 
         private void Camara_Click(object sender, EventArgs e)

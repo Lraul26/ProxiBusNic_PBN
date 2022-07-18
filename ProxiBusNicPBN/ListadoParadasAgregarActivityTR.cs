@@ -16,7 +16,7 @@ namespace ProxiBusNicPBN
     {
         int idRuta;
         ListView lvParadas;
-        Button btnAgregarParadas;
+        ImageButton btnAgregarParadas;
          
         proxibusnicweb.ProxiBusNicWS db = new proxibusnicweb.ProxiBusNicWS();
         List<proxibusnicweb.ParadasWS> listaParadas = new List<proxibusnicweb.ParadasWS>();
@@ -35,7 +35,7 @@ namespace ProxiBusNicPBN
 
                 lvParadas.ItemClick += LvParadas_ItemClick;
 
-                btnAgregarParadas = FindViewById<Button>(Resource.Id.btnAgregarParadas);
+                btnAgregarParadas = FindViewById<ImageButton>(Resource.Id.btnAgregarParadas);
                 btnAgregarParadas.Click += BtnAgregarParadas_Click;
             }
             else

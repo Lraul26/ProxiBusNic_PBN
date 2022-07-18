@@ -22,11 +22,21 @@
     android:layout_height="300dp"
     android:id="@+id/lvParadas" />
         
-    <Button
-        android:text="Agregar"
-        android:layout_width="100dp"
-        android:layout_gravity="center"
+     
+    <ImageButton
+        android:src="@drawable/aceptar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/background"
         android:id="@+id/btnAgregarParadas" />
-
+        <TextView
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Agregar paradas"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="90.0dp"
+        android:id="@+id/txtparadastotal" />
 </LinearLayout>

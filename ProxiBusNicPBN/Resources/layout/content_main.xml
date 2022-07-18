@@ -8,5 +8,37 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
+  
+   <TextView
+        android:text="¡Bienvenido!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" 
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:padding="40dp">
+
+           
+        <ImageView
+            android:src="@drawable/originallogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1" />
+                  
+    </LinearLayout> />
+    
+          
 
 </RelativeLayout>
