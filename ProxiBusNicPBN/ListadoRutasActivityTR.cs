@@ -36,8 +36,7 @@ namespace ProxiBusNicPBN
             {
                 listaBus = db.ListarBus().ToList();
                 lvRutas.Adapter = new Clases.RutasAdapter(this, listaBus);
-
-      
+                     
             }
         
             lvRutas.ItemClick += LvRutas_ItemClick;
@@ -47,10 +46,7 @@ namespace ProxiBusNicPBN
         {
          Intent i = new Intent(this, typeof(ListadoParadasActivityTR));
             proxibusnicweb.BusWS bus;
-        
-                 bus = listaBus[e.Position];
- 
-                     
+            bus = listaBus[e.Position];
             i.PutExtra("id", bus.Id);
             StartActivity(i);
         }

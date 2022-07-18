@@ -51,11 +51,13 @@ namespace ProxiBusNicPBN.Clases
             txtruta.SetTextColor(Color.LightGray);
 
             TextView txtCantidadParadas = view.FindViewById<TextView>(Android.Resource.Id.Text2);
-            txtCantidadParadas.Text = "Ruta " + item.NumeroRuta.ToString();
-            txtCantidadParadas.SetTextColor(Color.LightGray);
+          //  txtCantidadParadas.Text = "Ruta " + item.NumeroRuta.ToString();
+          
 
             proxibusnicweb.ProxiBusNicWS db = new proxibusnicweb.ProxiBusNicWS();
-            txtCantidadParadas.Text = db.ListarBusParada().Where(r => r.BusId == item.Id).Count().ToString();
+            //txtCantidadParadas.Text = "Cantidad de paradas: " + lista.Count;
+            txtCantidadParadas.Text = "Cantidad de paradas: " + db.ListarBusParada().Where(r => r.BusId == item.Id).Count().ToString();
+            txtCantidadParadas.SetTextColor(Color.LightGray);
             return view;
         
     }
