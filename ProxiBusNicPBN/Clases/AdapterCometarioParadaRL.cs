@@ -13,12 +13,12 @@ using System.Text;
 
 namespace ProxiBusNicPBN.Clases
 {
-    internal class AdapterCometarioParada : BaseAdapter
+    internal class AdapterCometarioParadaRL : BaseAdapter
     {
         Activity context;
         List<proxibusnicweb.ParadasWS> ListaParadas;
 
-        public AdapterCometarioParada(Activity context, List<ParadasWS> listaParadas)
+        public AdapterCometarioParadaRL(Activity context, List<ParadasWS> listaParadas)
         {
             this.context = context;
             ListaParadas = listaParadas;

@@ -30,18 +30,16 @@ namespace ProxiBusNicPBN
         private void listaPorUsuario()
         {
             var correo = Clases.Global.Usuario.correo;
-            lvsugerencia.Adapter = new Clases.AdapterSugerencia(this, servicio.ListarSugerencias().Where(x => x.UsuarioCreacion == correo).ToList());
+            lvsugerencia.Adapter = new Clases.AdapterSugerenciaRL(this, servicio.ListarSugerencias().Where(x => x.UsuarioCreacion == correo).ToList());
         }
         private void Lvsugerencia_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
+            var correo = Clases.Global.Usuario.correo;
             var item = new Intent(this, typeof(EditarSugerenciaRL));
-
-            sugerencia = servicio.ListarSugerencias().ToList()[e.Position];
+            sugerencia = servicio.ListarSugerencias().Where(x => x.UsuarioCreacion == correo).ToList()[e.Position];
             item.PutExtra("id", sugerencia.Id);
             StartActivity(item);
-            Toast.MakeText(Application.Context, "Ha Seleccionado: " + sugerencia.DescripcionSugerencia, ToastLength.Short).Show();
+            Toast.MakeText(Application.Context, "Usted ha eleccionado: " + sugerencia.DescripcionSugerencia, ToastLength.Short).Show();
         }
-
-       
     }
 }

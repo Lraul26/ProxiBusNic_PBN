@@ -32,7 +32,8 @@ namespace ProxiBusNicPBN
         }
         private void EditarParada_Click(object sender, EventArgs e)
         {
-           
+            var item = new Intent(this, typeof(ListaParadasEditarRL));
+            StartActivity(item);
         }
 
         private void EditarBus_Click(object sender, EventArgs e)

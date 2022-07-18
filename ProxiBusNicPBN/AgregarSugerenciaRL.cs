@@ -42,7 +42,7 @@ namespace ProxiBusNicPBN
             Cancelar = (ImageButton)FindViewById(Resource.Id.btnCancelarCom);
             Editar = (ImageButton)FindViewById(Resource.Id.btnEditarCom);
 
-            lvparada.Adapter = new Clases.AdapterCometarioParada(this, servicio.ListarParadaActivas().ToList());
+            lvparada.Adapter = new Clases.AdapterCometarioParadaRL(this, servicio.ListarParadaActivas().ToList());
             lvparada.ItemClick += Lvparada_ItemClick;
 
             Aceptar.Click += Aceptar_Click;

@@ -176,7 +176,7 @@
         android:src="@drawable/aceptar"
         android:layout_width="69.5dp"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton1" />
+        android:id="@+id/btnAceptar" />
     <TextView
         android:gravity="center"
         android:textColor="@android:color/white"
