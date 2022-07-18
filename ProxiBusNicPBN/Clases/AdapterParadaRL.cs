@@ -2,9 +2,9 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
-using Android.Graphics;
 using ProxiBusNicPBN.proxibusnicweb;
 using System;
 using System.Collections.Generic;
@@ -13,18 +13,18 @@ using System.Text;
 
 namespace ProxiBusNicPBN.Clases
 {
-    internal class AdapterSugerencia : BaseAdapter
+    internal class AdapterParadaRL : BaseAdapter
     {
         Activity context;
-        List<proxibusnicweb.SugerenciaWS> sugerencia;
+        List<proxibusnicweb.ParadasWS> ListaParada;
 
-        public AdapterSugerencia(Activity context, List<SugerenciaWS> sugerencia)
+        public AdapterParadaRL(Activity context, List<ParadasWS> listaParada)
         {
             this.context = context;
-            this.sugerencia = sugerencia;
+            ListaParada = listaParada;
         }
 
-        public override int Count => sugerencia.Count();
+        public override int Count => ListaParada.Count();
 
         public override Java.Lang.Object GetItem(int position)
         {
@@ -39,7 +39,7 @@ namespace ProxiBusNicPBN.Clases
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             //elemento devuelto
-            var item = sugerencia[position];
+            var item = ListaParada[position];
             //Definimos el formato fila
             View view = convertView;
             if (view == null)
@@ -47,11 +47,11 @@ namespace ProxiBusNicPBN.Clases
             proxibusnicweb.ProxiBusNicWS serve = new proxibusnicweb.ProxiBusNicWS();
 
             TextView TxtSugerencia = view.FindViewById<TextView>(Android.Resource.Id.Text1);
-            TxtSugerencia.Text = "Comentario: " + item.DescripcionSugerencia.ToString();
+            TxtSugerencia.Text = "Descripcion: " + item.Descripcion.ToString();
             TxtSugerencia.SetTextColor(Color.LightGray);
 
             TextView TxtUsuario = view.FindViewById<TextView>(Android.Resource.Id.Text2);
-            TxtUsuario.Text =  "Parada: "+ serve.ListarParada().Where(x=> x.Id == item.ParadaId).FirstOrDefault().Descripcion;
+            TxtUsuario.Text = "Total Ruta: " + serve.ListarBusParada().Where(x => x.ParadaId == item.Id).Count(x=> x.ParadaId == item.Id).ToString();
             TxtUsuario.SetTextColor(Color.LightGray);
             return view;
         }

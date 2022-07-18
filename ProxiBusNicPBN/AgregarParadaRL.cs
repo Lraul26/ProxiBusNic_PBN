@@ -19,16 +19,8 @@ namespace ProxiBusNicPBN
     [Activity(Label = "AgregarParadaRL")]
     public class AgregarParadaRL : Activity
     {
-
         proxibusnicweb.ParadasWS serve = new proxibusnicweb.ParadasWS();
         proxibusnicweb.ProxiBusNicWS db = new proxibusnicweb.ProxiBusNicWS();
-
-        readonly string[] permissionGroup =
-        {
-            Manifest.Permission.ReadExternalStorage,
-            Manifest.Permission.WriteExternalStorage,
-            Manifest.Permission.Camera
-        };
 
         EditText Descripcion, Alias, Longitud, Latitud;
         ImageView FotoParada;
@@ -207,24 +199,15 @@ namespace ProxiBusNicPBN
             var file = await CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
             {
                 PhotoSize = Plugin.Media.Abstractions.PhotoSize.Full,
-                CompressionQuality = 320 * 320
+                CompressionQuality = 40
             });
 
             bitmapData = System.IO.File.ReadAllBytes(file.Path);
             Bitmap bitmap = BitmapFactory.DecodeByteArray(bitmapData, 0, bitmapData.Length);
             FotoParada.SetImageBitmap(bitmap);
-            using (var stream = new MemoryStream())
-            {
-                bitmap.Compress(Bitmap.CompressFormat.Png, 0, stream);
-                bitmapData = stream.ToArray();
-            }
+            
         }
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
+       
         private bool validarVacios()
         {
             if (String.IsNullOrEmpty(Descripcion.Text.Trim()))
@@ -240,6 +223,12 @@ namespace ProxiBusNicPBN
             Alias.Text = String.Empty;
             Longitud.Text = String.Empty;
             Latitud.Text = String.Empty;
+        }
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

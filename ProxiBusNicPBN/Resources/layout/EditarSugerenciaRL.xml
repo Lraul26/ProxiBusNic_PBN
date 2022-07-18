@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@color/background"
@@ -44,7 +45,7 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1" >
+        android:id="@+id/linearLayout1">
         <ImageButton
             android:gravity="center"
             android:contentDescription=""
@@ -61,6 +62,15 @@
             android:layout_width="100.0dp"
             android:layout_height="match_parent"
             android:id="@+id/btnEliminarComent"/>
+        <ImageButton
+            android:gravity="center"
+            android:contentDescription=""
+            android:background="@color/background"
+            android:src="@drawable/atras"
+            android:layout_width="100.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnatras" />
+
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -74,18 +84,26 @@
             android:gravity="center"
             android:textColor="@color/blanco"
             android:text="@string/txt29"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="106.0dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="100.0dp"
             android:layout_height="match_parent"
             android:id="@+id/textView4" />
         <TextView
             android:gravity="center"
             android:textColor="@color/blanco"
             android:text="Eliminar"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@+id/textView5"
-            android:layout_width="97.5dp"
+            android:layout_width="100.0dp"
             android:layout_height="wrap_content"
             />
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/blanco"
+            android:text="Atras"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="100.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView6" />
     </LinearLayout>
 </LinearLayout>

@@ -65,16 +65,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccionesAvanzadasRL.cs" />
+    <Compile Include="Clases\AdapterBusRL.cs" />
+    <Compile Include="DetalleListaParadaRl.cs" />
     <Compile Include="ActivityLogin.cs" />
     <Compile Include="ActivityRegistrar.cs" />
     <Compile Include="AgregarParadaRL.cs" />
     <Compile Include="AgregarSugerenciaRL.cs" />
-    <Compile Include="Clases\AdapterCometarioParada.cs" />
-    <Compile Include="Clases\AdapterParadaEditar.cs" />
-    <Compile Include="Clases\AdapterSugerencia.cs" />
+    <Compile Include="Clases\AdapterCometarioParadaRL.cs" />
+    <Compile Include="Clases\AdapaterDetalleParadaRL.cs" />
+    <Compile Include="Clases\AdapterParadaRL.cs" />
+    <Compile Include="Clases\AdapterSugerenciaRL.cs" />
     <Compile Include="Clases\Global.cs" />
     <Compile Include="EditarParadaRL.cs" />
     <Compile Include="EditarSugerenciaRL.cs" />
+    <Compile Include="listaBusesRL.cs" />
+    <Compile Include="ListadoParadaRL.cs" />
     <Compile Include="ListadoSugerenciaRL.cs" />
     <Compile Include="ListaParadasEditarRL.cs" />
     <Compile Include="MainActivity.cs" />
@@ -576,6 +581,21 @@
     <AndroidResource Include="Resources\drawable-xhdpi\atras.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\atras.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\atras.png" />
+    <AndroidResource Include="Resources\layout\ListaParadaRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListaDetalleParadaRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\listaRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListaBusRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListaBusRowRL.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <Content Include="xml\file_paths.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

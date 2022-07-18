@@ -61,7 +61,6 @@ namespace ProxiBusNicPBN
                         Clases.Global.Usuario.usuarioAnonimo = db.RolAnonimo(correo);
                         if (cbxRecordar.Checked)
                         {
-
                             ISharedPreferences preferencia = Application.Context.GetSharedPreferences("informacion", FileCreationMode.Private);
                             ISharedPreferencesEditor editor = preferencia.Edit();
                             editor.PutString("correo", correo);
@@ -69,13 +68,9 @@ namespace ProxiBusNicPBN
                             editor.PutBoolean("recordar", cbxRecordar.Checked);
                             editor.PutBoolean("usuarioAnonimo", Clases.Global.Usuario.usuarioAnonimo);
                             editor.Apply();
-
-
                         }
-
                         Clases.Global.Usuario.correo = correo;
                         Clases.Global.Usuario.clave = clave;
-
 
                         var res = new Intent(this, typeof(MainActivity));
                         StartActivity(res);

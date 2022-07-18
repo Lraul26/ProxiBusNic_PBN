@@ -24,7 +24,7 @@ namespace ProxiBusNicPBN
             // Create your application here
 
             listaparada = (ListView)FindViewById(Resource.Id.listaparada);
-            listaparada.Adapter = new Clases.AdapterCometarioParada(this, serve.ListarParada().ToList());
+            listaparada.Adapter = new Clases.AdapterCometarioParadaRL(this, serve.ListarParada().ToList());
             listaparada.ItemClick += Listaparada_ItemClick;
         }
 

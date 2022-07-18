@@ -84,7 +84,8 @@ namespace ProxiBusNicPBN
             }
             else if (id == Resource.Id.nav_parada)
             {
-
+                var res = new Intent(this, typeof(ListadoParadaRL));
+                StartActivity(res);
             }
             else if (id == Resource.Id.nav_opciones)
             {
