@@ -82,6 +82,7 @@
     <Compile Include="ListadoAsignarParadasActivityTR.cs" />
     <Compile Include="ListadoParadasActivityTR.cs" />
     <Compile Include="ListadoEditarRutasActivityTR .cs" />
+    <Compile Include="ListadoParadasAgregarActivityTR.cs" />
     <Compile Include="ListadoRutasActivityTR.cs" />
     <Compile Include="ListadoSugerenciaRL.cs" />
     <Compile Include="MainActivity.cs" />
@@ -578,6 +579,7 @@
     <AndroidResource Include="Resources\layout\EditarRutaTR.xml" />
     <AndroidResource Include="Resources\layout\ListadoEditarRutasTR.xml" />
     <AndroidResource Include="Resources\layout\ListadoAsignarParadasTR.xml" />
+    <AndroidResource Include="Resources\layout\ListadoParadasAgregarTR.xml" />
     <Content Include="xml\file_paths.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
