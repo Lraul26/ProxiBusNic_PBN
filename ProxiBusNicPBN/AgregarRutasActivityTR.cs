@@ -115,7 +115,17 @@ Result resultCode, Intent data)
 
         private void BtnAsignarParadas_Click(object sender, EventArgs e)
         {
-            
+            if (idRuta == 0)
+            {
+                Toast.MakeText(Application.Context, "Primero registre la ruta para asignarle sus paradas", ToastLength.Short).Show();
+            }
+            else
+            {
+
+                Intent i = new Intent(this, typeof(ListadoParadasAgregarActivityTR));
+                i.PutExtra("id", idRuta);
+                StartActivity(i);
+            }
 
         }
         private bool validar()
@@ -153,7 +163,7 @@ Result resultCode, Intent data)
                   idRuta = db.AgregarBus(ruta);
                 if (idRuta>0)
                 {
-                    Toast.MakeText(Application.Context, "Se ha registrado la ruta", ToastLength.Short).Show();
+                    Toast.MakeText(Application.Context, "Se ha registrado la ruta, puede proseguir a asignarle paradas", ToastLength.Short).Show();
                     limpiar();
                 }
             }
