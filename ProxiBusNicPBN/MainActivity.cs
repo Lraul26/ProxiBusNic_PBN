@@ -98,7 +98,7 @@ namespace ProxiBusNicPBN
                 Android.App.AlertDialog.Builder alert = new Android.App.AlertDialog.Builder(this);
                 alert.SetTitle("Tema");
                 alert.SetMessage("¿Desea cambiar el tema de la App?");
-                alert.SetPositiveButton("Tema Oscuro", (senderAlert, args) =>
+                alert.SetPositiveButton("Tema Oscuro ", (senderAlert, args) =>
                 {
                     ISharedPreferences tema = Application.GetSharedPreferences("Tema", FileCreationMode.Private);
                     ISharedPreferencesEditor editor = tema.Edit();
