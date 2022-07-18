@@ -87,6 +87,7 @@
     <Compile Include="ListadoAsignarParadasActivityTR.cs" />
     <Compile Include="ListadoParadasActivityTR.cs" />
     <Compile Include="ListadoEditarRutasActivityTR .cs" />
+    <Compile Include="ListadoParadasAgregarActivityTR.cs" />
     <Compile Include="ListadoRutasActivityTR.cs" />
     <Compile Include="listaBusesRL.cs" />
     <Compile Include="ListadoParadaRL.cs" />
@@ -586,6 +587,7 @@
     <AndroidResource Include="Resources\layout\EditarRutaTR.xml" />
     <AndroidResource Include="Resources\layout\ListadoEditarRutasTR.xml" />
     <AndroidResource Include="Resources\layout\ListadoAsignarParadasTR.xml" />
+    <AndroidResource Include="Resources\layout\ListadoParadasAgregarTR.xml" />
     <AndroidResource Include="Resources\layout\ListadoParadaEditarRL.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
