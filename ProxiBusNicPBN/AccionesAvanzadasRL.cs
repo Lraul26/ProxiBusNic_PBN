@@ -38,12 +38,14 @@ namespace ProxiBusNicPBN
 
         private void EditarBus_Click(object sender, EventArgs e)
         {
-            
+            Intent i = new Intent(this, typeof(ListadoEditarRutasActivityTR));           
+            StartActivity(i);
         }
 
         private void AgregarBus_Click(object sender, EventArgs e)
         {
-            
+            var item = new Intent(this, typeof(AgregarRutasActivityTR));
+            StartActivity(item);
         }
 
         private void AgregarParada_Click(object sender, EventArgs e)
