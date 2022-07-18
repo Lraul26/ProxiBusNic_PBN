@@ -80,7 +80,8 @@ namespace ProxiBusNicPBN
 
             if (id == Resource.Id.nav_rutas)
             {
-
+                Intent i = new Intent(this,typeof(ListadoRutasActivityTR));
+                StartActivity(i);
             }
             else if (id == Resource.Id.nav_parada)
             {

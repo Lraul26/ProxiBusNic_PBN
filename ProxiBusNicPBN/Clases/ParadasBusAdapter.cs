@@ -43,12 +43,13 @@ namespace ProxiBusNicPBN.Clases
             View view = convertView;
             if (view == null)
                 view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem2, null);
+           
             TextView parada = view.FindViewById<TextView>(Android.Resource.Id.Text1);
+            parada.Text = "Parada "+item.Descripcion;
             parada.SetTextColor(Color.LightGray);
+
             TextView txtAlias = view.FindViewById<TextView>(Android.Resource.Id.Text2);
             txtAlias.SetTextColor(Color.LightGray);
-
-          
 
                 if (String.IsNullOrEmpty(item.Alias))
                 {
@@ -58,10 +59,7 @@ namespace ProxiBusNicPBN.Clases
                 {
                     txtAlias.Text = "Alias: " + item.Alias.ToString();
                 }
-
-           
- 
-
+                
             return view;
         }
     }

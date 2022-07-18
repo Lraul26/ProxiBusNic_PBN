@@ -35,9 +35,7 @@ namespace ProxiBusNicPBN
             lvParadas= FindViewById<ListView>(Resource.Id.lvParadas);
 
             paradasBus = db.ListarBusParada().Where(x => x.BusId == idRuta).ToList();
-
-           
-
+                    
             if (Clases.Global.Usuario.usuarioAnonimo)
             {
                 for (int i =0;i<paradasBus.Count;i++)
@@ -57,15 +55,9 @@ namespace ProxiBusNicPBN
                
             }
             
-
-
             lvParadas.Adapter = new Clases.ParadasBusAdapter(this, listaParadas);
 
-            
-
             lvParadas.ItemClick += LvParadas_ItemClick;
-
-
 
         }
 

@@ -37,9 +37,7 @@ namespace ProxiBusNicPBN
 
         private void EditarBus_Click(object sender, EventArgs e)
         {
-            Intent i = new Intent(this, typeof(ListadoEditarRutasActivityTR));
-    
-             
+            Intent i = new Intent(this, typeof(ListadoEditarRutasActivityTR));           
             StartActivity(i);
         }
 
