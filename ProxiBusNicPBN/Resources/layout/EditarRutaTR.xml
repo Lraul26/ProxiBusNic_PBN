@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="15dp"
     android:layout_width="match_parent"
     android:background="@color/background"
     android:padding="15.0dp"
@@ -21,83 +23,249 @@
             android:id="@+id/linearLayout1"
             android:padding="10dp">
         
-                <TextView
-                    android:gravity="center"
+     <TextView
+        android:gravity="center"
+        android:text="Editar ruta"
         android:textStyle="bold"
         android:textAlignment="center"
         android:text="Edición de ruta"
         android:textColor="@android:color/white"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
+        android:layout_height="81.0dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/textView1" />
         android:layout_height="90.0dp"/>
-            <TextView
-                android:textColor="@android:color/white"
-                android:text="Número de ruta"
+    <TextView
+        android:textColor="@android:color/white"
+        android:text="Número de ruta"
+        android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt1" />
                 android:id="@+id/lblNumRuta" />
-            <EditText
-                android:textColor="@android:color/white"
+    <EditText
+        android:textColor="@android:color/white"
                 android:inputType="text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtNumeroRuta" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNumeroRuta" />
+    <TextView
+        android:textColor="@android:color/holo_red_light"
+        android:text="@string/txt20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt2" />
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt3" />
+ 
             <CheckBox
                 android:text="Estado"
                 android:textColor="@android:color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/chkEstado" />
-            <ImageView
+  
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt6" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutEditarParada1" >
+    
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutEditarParada2">
+      
+    </LinearLayout>
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt30"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txt11" />
+    <ImageView
+        android:contentDescription=""
+        android:src="@drawable/ruta"
                 android:src="@android:drawable/ic_menu_gallery"
-                android:layout_width="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="182.0dp"
             android:layout_height="100dp"
 
-                android:id="@+id/imgFotoBus" />
-            <LinearLayout
-                android:orientation="horizontal"
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+        android:id="@+id/imgFotoBus" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutEditarParada4">
+        <ImageButton
+            android:contentDescription=""
+            android:layout_margin="5dp"
+            android:paddingBottom="5dp"
+            android:background="@color/background"
+            android:src="@drawable/galeria"
                 android:id="@+id/linearLayout2">
                 <Button
                 android:text="Subir foto"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnAbrirGaleria" />
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAbrirGaleria" />
+        <ImageButton
+            android:contentDescription=""
+            android:layout_margin="5dp"
+            android:paddingBottom="5dp"
+            android:background="@color/background"
+            android:src="@drawable/camara"
                 <Button
                     android:text="Tomar foto"
-                    android:layout_width="100dp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btnAbrirCamara" />
+            android:id="@+id/btnAbrirCamara" />
+        <ImageButton
+            android:background="@color/background"
+            android:src="@drawable/cancelar"
                 <Button
               android:text="Borrar foto"
-              android:layout_width="100dp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
               android:layout_height="wrap_content"
-              android:id="@+id/btnBorrarFoto" />
-            
-            </LinearLayout>
+            android:id="@+id/btnBorrarFoto" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
       
             
             <Button
       android:text="Reasignar paradas"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1" >
+        <TextView
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Subir Foto"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5" />
+        <TextView
+              android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Tomar Foto"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView6" />
+        <TextView
+              android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Quitar Foto"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView7" />
+    </LinearLayout>
       android:id="@+id/btnReasignarParadas" />
 
-            
+
+    <LinearLayout
+         android:gravity="center"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
             <Button
     android:text="Guardar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/btnGuardar" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutEditarParada5">
+        <ImageButton
+            android:gravity="center"
+            android:background="@color/background"
+            android:contentDescription=""
+            android:src="@drawable/cancelar"
+            android:layout_width="125.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnEliminar" />
+        <ImageButton
+            android:gravity="center"
+            android:background="@color/background"
+            android:contentDescription=""
+            android:src="@drawable/aceptar"
+            android:layout_width="105.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnGuardar" />
+        <ImageButton
+            android:contentDescription=""
+            android:gravity="center"
+            android:background="@color/background"
+            android:src="@drawable/atras"
+            android:layout_width="126.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnReasignarParadas" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
     
                         <Button
     android:text="Eliminar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutEditarParada6" >
+        <TextView
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Eliminar ruta"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="122.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Guardar Cambios"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="116.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Reasignar paradas"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="106.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView4" />
+    </LinearLayout>
     android:id="@+id/btnEliminar" />
     
 

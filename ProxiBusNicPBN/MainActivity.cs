@@ -90,8 +90,15 @@ namespace ProxiBusNicPBN
             }
             else if (id == Resource.Id.nav_opciones)
             {
-                var res = new Intent(this, typeof(AccionesAvanzadasRL));
-                StartActivity(res);
+                 
+                if (!Clases.Global.Usuario.usuarioAnonimo)
+                {
+                    var res = new Intent(this, typeof(AccionesAvanzadasRL));
+                    StartActivity(res);
+                }
+            
+                
+             
             }
             else if (id == Resource.Id.nav_tema)
             {

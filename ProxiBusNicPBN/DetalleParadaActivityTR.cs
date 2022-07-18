@@ -18,6 +18,7 @@ namespace ProxiBusNicPBN
         proxibusnicweb.ProxiBusNicWS db = new proxibusnicweb.ProxiBusNicWS();
         proxibusnicweb.ParadasWS parada;
         TextView NomParada, txtAlias, txtUbicacion;
+        ImageButton btnIr;
         Button btnIr;
         ImageView imgView;
 
@@ -35,6 +36,7 @@ namespace ProxiBusNicPBN
             txtUbicacion = FindViewById<TextView>(Resource.Id.txtUbicacion);
             NomParada.Text = parada.Descripcion;
             imgView = FindViewById<ImageView>(Resource.Id.imgParada);
+            btnIr = FindViewById<ImageButton>(Resource.Id.btnIr);
             btnIr = FindViewById<Button>(Resource.Id.btnIr);
             btnIr.Click += BtnIr_Click;
 
@@ -57,10 +59,12 @@ namespace ProxiBusNicPBN
 
             if (String.IsNullOrEmpty(parada.Longitud) && String.IsNullOrEmpty(parada.Latitud))
             {
+                txtUbicacion.Text = "Ubicación\nN/A";
                 txtUbicacion.Text = "Ubicación: N/A";
             }
             else
             {
+                txtAlias.Text = "Ubicacion\n\nLatitud: " + parada.Latitud + " Longitud" + parada.Longitud;
                 txtAlias.Text = "Ubicacion: Latitud: " + parada.Latitud + " Longitud" + parada.Longitud;
             }
 

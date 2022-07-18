@@ -15,19 +15,52 @@
         android:layout_width="match_parent"
         android:layout_height="90.0dp"
         android:id="@+id/tvtitulo" />
- 
+
 
     <ListView
         android:cacheColorHint="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:id="@+id/lvParadas" />
-    <LinearLayout
+ 
+          <LinearLayout
+        android:gravity="center"
         android:orientation="horizontal"
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutEditarParada4">
+           <ImageButton
+            android:src="@drawable/cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnEliminar" 
+            android:background="@color/background"/>
+            <TextView
+                android:text="Text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/textView2" />
+        
+                  <ImageButton
+            android:src="@drawable/aceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnAgregar" 
+            android:background="@color/background"/>
+
+        
+
+         
+        
+        </LinearLayout>
+       <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
         android:id="@+id/linearLayout1">
         <Button
         android:text="Eliminar paradas"
@@ -38,9 +71,37 @@
         android:text="Agregar paradas"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:id="@+id/fg" >
+
+           <TextView
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Eliminar paradas"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="122.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2" />
+
         android:id="@+id/btnAgregar" />
-    
+        
+           <TextView
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="122.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/fgdhgf" />
     </LinearLayout> />
 
-
+        
+           <TextView
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Agregar paradas"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="122.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/txtxt" />
+        </LinearLayout>
 </LinearLayout>

@@ -17,6 +17,7 @@ namespace ProxiBusNicPBN
     {
         int idRuta;
         ListView lvParadas;
+        ImageButton btnEliminar, btnAgregar;
         Button btnEliminar, btnAgregar;
         TextView lblListadoParadas;
         proxibusnicweb.ProxiBusNicWS db = new proxibusnicweb.ProxiBusNicWS();
@@ -35,9 +36,11 @@ namespace ProxiBusNicPBN
              idRuta = Intent.GetIntExtra("id", 0);
 
             proxibusnicweb.BusWS rutaSeleccionada = db.ListarBus().Where(b => b.Id == idRuta).FirstOrDefault();
+            btnEliminar = FindViewById<ImageButton>(Resource.Id.btnEliminar);
             btnEliminar = FindViewById<Button>(Resource.Id.btnEliminar);
             btnEliminar.Click += BtnEliminar_Click;
 
+            btnAgregar = FindViewById<ImageButton>(Resource.Id.btnAgregar);
             btnAgregar = FindViewById<Button>(Resource.Id.btnAgregar);
             btnAgregar.Click += BtnAgregar_Click;
 

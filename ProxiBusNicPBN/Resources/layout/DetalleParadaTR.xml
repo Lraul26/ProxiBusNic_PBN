@@ -28,12 +28,14 @@
     <TextView
         android:textColor="@color/blanco"
         android:text=""
+        android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtAlias" />
 
         <TextView
+        android:textAlignment="center"
         android:textColor="@color/blanco"
         android:text=""
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -41,12 +43,23 @@
         android:layout_height="wrap_content"
         android:id="@+id/txtUbicacion" />
 
+    <ImageButton
+        android:src="@drawable/aceptar"
+        android:background="@color/background"
     <Button
         
         android:text="@string/btnIr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnIr" />
-
+     
+         <TextView
+        android:textAlignment="center"
+        android:textColor="@color/blanco"
+        android:text="Ir a"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtIr" />
 
 </LinearLayout>
